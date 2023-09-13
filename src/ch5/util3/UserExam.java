@@ -1,4 +1,4 @@
-package ch5;
+package ch5.util3;
 
 public class UserExam {
     public static void main(String[]args) {

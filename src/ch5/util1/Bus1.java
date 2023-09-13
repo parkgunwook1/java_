@@ -1,4 +1,4 @@
-package ch5;
+package ch5.util1;
 
 public class Bus1 extends Car1 {
     public Bus1() {

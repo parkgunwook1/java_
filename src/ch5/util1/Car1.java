@@ -1,4 +1,4 @@
-package ch5;
+package ch5.util1;
 
 public abstract class Car1 {
     public Car1(String name) {

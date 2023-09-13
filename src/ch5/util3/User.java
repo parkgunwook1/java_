@@ -1,4 +1,4 @@
-package ch5;
+package ch5.util3;
 
 public class User {
     private String email;

@@ -1,4 +1,4 @@
-package ch5;
+package ch5.util1;
 
 public class CarExam {
     public static void main(String[]args) {
