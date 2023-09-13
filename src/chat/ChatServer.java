@@ -19,6 +19,7 @@ public class ChatServer {
         List<PrintWriter> outList = Collections.synchronizedList(new ArrayList<>());
         while (true) {
             Socket socket = serverSocket.accept();
+            System.out.println("접속 : " + socket);
 
             ChatThread chatThread = new ChatThread(socket , outList);
             chatThread.start();
@@ -57,7 +58,8 @@ class ChatThread extends Thread {
             while ((line = in.readLine()) != null) {
                 for(int i = 0; i < outList.size(); i++) {
                     PrintWriter o = outList.get(i);
-                    o.println(line);
+                    o.println("어떤 클라이언트가 접속이 끊어졌어요.");
+                    o.flush();
                 }
             }
         } catch (Exception ex) {
