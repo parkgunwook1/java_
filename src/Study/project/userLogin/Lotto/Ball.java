@@ -1,4 +1,4 @@
-package ch5.util2;
+package Study.project.userLogin.Lotto;
 
 // 불변객체
 public class Ball {

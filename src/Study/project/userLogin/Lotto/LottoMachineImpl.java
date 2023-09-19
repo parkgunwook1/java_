@@ -1,4 +1,4 @@
-package ch5.util2;
+package Study.project.userLogin.Lotto;
 
 // 인터페이스를 구현하게 되면 반드시 인터페이스가 가지고 있는 메소드를 오버라이딩할 필요가있다.
 public class LottoMachineImpl implements LottoMachine{

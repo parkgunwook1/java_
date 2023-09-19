@@ -1,6 +1,4 @@
-package ch5.util2;
-
-import ch5.util2.Ball;
+package Study.project.userLogin.Lotto;
 
 /*
 1. 1~45까지 써있는 Ball을 로또 기계에 넣는다.

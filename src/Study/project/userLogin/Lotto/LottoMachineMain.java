@@ -1,4 +1,4 @@
-package ch5.util2;
+package Study.project.userLogin.Lotto;
 
 public class LottoMachineMain {
     public static void main(String[] args) {
