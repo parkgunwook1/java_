@@ -1,4 +1,4 @@
-package ch6;
+package Study.ch6;
 
 public class EmptyCommandLineArgumentExam {
     public static void main(String[] args) {

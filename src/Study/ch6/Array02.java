@@ -1,4 +1,4 @@
-package ch6;
+package Study.ch6;
 
 public class Array02 {
     public static void main(String[] args) {
