@@ -1,4 +1,4 @@
-package Study1.ch7;
+package Study.ch7;
 
 public class ObjectBoxMain {
     public static void main(String[] args) {
