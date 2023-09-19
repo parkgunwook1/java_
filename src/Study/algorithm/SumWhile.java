@@ -1,8 +1,8 @@
-package algorithm;
+package Study.algorithm;
 
 import java.util.Scanner;
 
-public class SumFor {
+public class SumWhile {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
 
@@ -11,10 +11,12 @@ public class SumFor {
         int n = stdIn.nextInt();
 
         int sum = 0;
+        int i = 1;
 
-        for (int i =1; i <=n; i++)
+        while (i <= n) {
             sum += i;
-
+            i++;
+        }
         System.out.println("1부터" + n + "까지의 합은" + sum + "입니다.");
     }
 }
