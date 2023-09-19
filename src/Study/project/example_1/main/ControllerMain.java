@@ -1,7 +1,7 @@
-package Study.project.example.main;
+package Study.project.example_1.main;
 
-import Study.project.example.myproject.FirstController;
-import Study.project.example.pw.Controller;
+import Study.project.example_1.myproject.FirstController;
+import Study.project.example_1.pw.Controller;
 
 public class ControllerMain {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Study.project.example.util;
+package Study.project.example_1.util;
 
 public class Calculator {
     public int plus(int x, int y) {
