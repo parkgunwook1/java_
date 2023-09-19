@@ -1,4 +1,4 @@
-package ch8;
+package Study1.ch8;
 
 public class GenericBoxMain {
     public static void main(String[] args) {
