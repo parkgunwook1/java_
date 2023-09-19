@@ -1,4 +1,4 @@
-package Study.project.phone;
+package Study.project.phone_1;
 
 public class SmartPhoneExample {
     public static void main(String[]args) {
