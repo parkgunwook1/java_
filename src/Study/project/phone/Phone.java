@@ -1,4 +1,4 @@
-package Study.project.userLogin.phone;
+package Study.project.phone;
 
 public class Phone {
     //필드 선언

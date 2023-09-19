@@ -1,4 +1,4 @@
-package Study.project.userLogin;
+package Study.project.userLogin.example;
 
 import java.util.Scanner;
 

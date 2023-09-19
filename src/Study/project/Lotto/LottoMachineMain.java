@@ -1,4 +1,4 @@
-package Study.project.userLogin.Lotto;
+package Study.project.Lotto;
 
 public class LottoMachineMain {
     public static void main(String[] args) {

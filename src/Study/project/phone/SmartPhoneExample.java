@@ -1,4 +1,4 @@
-package Study.project.userLogin.phone;
+package Study.project.phone;
 
 public class SmartPhoneExample {
     public static void main(String[]args) {

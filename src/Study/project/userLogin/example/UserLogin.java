@@ -1,4 +1,4 @@
-package Study.project.userLogin;
+package Study.project.userLogin.example;
 
 public class UserLogin {
     private String id;

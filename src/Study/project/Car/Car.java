@@ -1,4 +1,4 @@
-package Study.project.userLogin.Car;
+package Study.project.Car;
 
 public class Car {
     private String carname; //차 이름
