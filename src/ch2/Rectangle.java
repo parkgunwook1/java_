@@ -1,4 +1,4 @@
-package ch1.ch2;
+package ch2;
 
 public class Rectangle {
 

@@ -1,4 +1,4 @@
-package ch1;
+package Study.project.userLogin.phone;
 
 public class SmartPhone extends Phone{
     //필드 선언
