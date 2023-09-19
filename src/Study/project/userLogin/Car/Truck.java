@@ -1,4 +1,4 @@
-package Project2;
+package Study.project.userLogin.Car;
 
 class Truck extends Car
 {
