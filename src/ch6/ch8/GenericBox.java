@@ -1,4 +1,4 @@
-package Study.ch8;
+package ch6.ch8;
 
 public class GenericBox <T> {
     // 타입을 아직 정해주지않음

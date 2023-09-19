@@ -1,4 +1,4 @@
-package Study.ch8;
+package ch6.ch8;
 
 import java.util.ArrayList;
 import java.util.List;
