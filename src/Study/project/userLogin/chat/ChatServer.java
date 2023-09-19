@@ -1,6 +1,4 @@
-package chat;
-
-import ch4.Parent_1;
+package Study.project.userLogin.chat;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
