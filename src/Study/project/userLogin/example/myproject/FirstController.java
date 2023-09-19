@@ -1,6 +1,6 @@
-package com.example.myproject;
+package Study.project.userLogin.example.myproject;
 
-import com.example.pw.Controller;
+import Study.project.userLogin.example.pw.Controller;
 
 public class FirstController extends Controller {
 

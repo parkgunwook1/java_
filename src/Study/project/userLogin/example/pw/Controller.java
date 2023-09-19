@@ -1,4 +1,4 @@
-package com.example.pw;
+package Study.project.userLogin.example.pw;
 public abstract class Controller {
     // protected는 같은 package이거나 상속받았을 경우 접근 가능하다.
     protected final void init() {
