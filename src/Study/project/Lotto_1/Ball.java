@@ -1,4 +1,4 @@
-package Study.project.Lotto;
+package Study.project.Lotto_1;
 
 // 불변객체
 public class Ball {
