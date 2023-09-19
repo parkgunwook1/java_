@@ -1,4 +1,4 @@
-package Study.project.userLogin.example;
+package Study.project.userLogin;
 
 public class UserData {
     private String[] adminData;
