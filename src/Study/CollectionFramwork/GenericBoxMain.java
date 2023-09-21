@@ -1,4 +1,4 @@
-package Study.ch8;
+package Study.CollectionFramwork;
 
 public class GenericBoxMain {
     public static void main(String[] args) {
