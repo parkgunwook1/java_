@@ -1,4 +1,4 @@
-package Study.algorithm;
+package Study.algorithm.ch1;
 
 public class Max3Method {
 
