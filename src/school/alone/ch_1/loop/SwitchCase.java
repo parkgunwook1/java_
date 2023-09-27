@@ -1,4 +1,4 @@
-package Study_2.alone;
+package school.alone.ch_1.loop;
 
 public class SwitchCase {
     public static void main(String[] args) {
