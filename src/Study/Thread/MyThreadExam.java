@@ -1,4 +1,4 @@
-package study.Thread;
+package study.thread;
 
 public class MyThreadExam {
     public static void main(String[] args) {
