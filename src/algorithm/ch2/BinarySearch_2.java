@@ -1,4 +1,4 @@
-package Study.algorithm.ch2;
+package algorithm.ch2;
 
 import java.util.Arrays;
 

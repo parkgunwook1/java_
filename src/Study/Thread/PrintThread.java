@@ -1,4 +1,4 @@
-package Study.Thread;
+package study.Thread;
 
 public class PrintThread extends Thread{
     private boolean stop;

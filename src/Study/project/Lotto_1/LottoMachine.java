@@ -1,4 +1,4 @@
-package Study.project.Lotto_1;
+package study.project.Lotto_1;
 
 /*
 1. 1~45까지 써있는 Ball을 로또 기계에 넣는다.

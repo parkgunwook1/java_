@@ -1,4 +1,4 @@
-package Study.CollectionFramwork.Stack;
+package study.CollectionFramwork.Stack;
 
 import java.util.Scanner;
 

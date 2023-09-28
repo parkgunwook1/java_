@@ -1,4 +1,4 @@
-package Study.algorithm.ch2;
+package algorithm.ch2;
 
 public class BinarySearch {
     public static int binarySearch(int[] arr, int target) {

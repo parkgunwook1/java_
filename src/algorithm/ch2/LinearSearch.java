@@ -1,4 +1,4 @@
-package Study.algorithm.ch2;
+package algorithm.ch2;
 
 public class LinearSearch {
         public static int linearSearch(int[] arr, int target) {

@@ -1,4 +1,4 @@
-package Study.CollectionFramwork;
+package study.CollectionFramwork;
 
 public class GenericBoxMain {
     public static void main(String[] args) {

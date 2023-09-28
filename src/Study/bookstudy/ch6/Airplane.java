@@ -1,4 +1,4 @@
-package Study.bookstudy.ch6;
+package study.bookstudy.ch6;
 
 public class Airplane {
 

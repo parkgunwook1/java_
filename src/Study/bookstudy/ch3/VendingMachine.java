@@ -1,4 +1,4 @@
-package Study.bookstudy.ch3;
+package study.bookstudy.ch3;
 
 public class VendingMachine {
     // field (가지는 것들)

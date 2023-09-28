@@ -1,4 +1,4 @@
-package Study.network;
+package study.network;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

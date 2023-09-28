@@ -1,4 +1,4 @@
-package Study.bookstudy.ch5;
+package study.bookstudy.ch5;
 
 public class Car {
 
