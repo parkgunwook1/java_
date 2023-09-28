@@ -1,4 +1,4 @@
-package study.Exception1;
+package study.exception;
 
 public class Exception1 {
     public static void main(String[] args) {
