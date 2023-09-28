@@ -1,4 +1,4 @@
-package study.algorithm.ch2;
+package Study.algorithm.ch2;
 
 public class IntArray {
     public static void main(String[] args) {

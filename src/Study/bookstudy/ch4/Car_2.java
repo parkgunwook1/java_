@@ -1,4 +1,4 @@
-package study.bookstudy.ch4;
+package Study.bookstudy.ch4;
 
 public class Car_2 {
     public void run() {

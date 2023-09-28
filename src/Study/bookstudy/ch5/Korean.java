@@ -1,4 +1,4 @@
-package study.bookstudy.ch5;
+package Study.bookstudy.ch5;
 
 public class Korean {
     // 인스턴스 필드와 정적 필드는 언제든지 값을 변경할 수 있다.

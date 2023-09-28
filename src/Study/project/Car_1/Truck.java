@@ -1,4 +1,4 @@
-package study.project.Car_1;
+package Study.project.Car_1;
 
 class Truck extends Car
 {

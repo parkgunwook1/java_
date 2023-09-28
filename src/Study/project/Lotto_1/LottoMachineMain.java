@@ -1,4 +1,4 @@
-package study.project.Lotto_1;
+package Study.project.Lotto_1;
 
 public class LottoMachineMain {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package study.Array;
+package Study.Array;
 
 public class Array02 {
     public static void main(String[] args) {

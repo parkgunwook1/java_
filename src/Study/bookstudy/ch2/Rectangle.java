@@ -1,4 +1,4 @@
-package study.bookstudy.ch2;
+package Study.bookstudy.ch2;
 
 public class Rectangle {
 

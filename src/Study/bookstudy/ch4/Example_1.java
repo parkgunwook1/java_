@@ -1,4 +1,4 @@
-package study.bookstudy.ch4;
+package Study.bookstudy.ch4;
 
 public class Example_1 {
     public static void main(String[]args) {

@@ -1,6 +1,6 @@
-package study.project.example_1.myproject;
+package Study.project.example_1.myproject;
 
-import study.project.example_1.pw.Controller;
+import Study.project.example_1.pw.Controller;
 
 public class FirstController extends Controller {
 

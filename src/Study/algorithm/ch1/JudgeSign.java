@@ -1,4 +1,4 @@
-package study.algorithm.ch1;
+package Study.algorithm.ch1;
 
 import java.util.Scanner;
 

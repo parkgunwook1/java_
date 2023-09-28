@@ -1,7 +1,8 @@
-package study.network;
+package Study.network;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 

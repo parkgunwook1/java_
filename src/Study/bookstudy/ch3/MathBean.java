@@ -1,4 +1,4 @@
-package study.bookstudy.ch3;
+package Study.bookstudy.ch3;
 
 public class MathBean {
     public void printClassName() {

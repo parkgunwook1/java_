@@ -1,4 +1,4 @@
-package study.bookstudy.ch4;
+package Study.bookstudy.ch4;
 
 public class Parent_1 {
     public int i = 15;
