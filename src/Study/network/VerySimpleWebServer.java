@@ -1,4 +1,4 @@
-package study.network1;
+package study.network;
 
 import java.io.InputStream;
 import java.io.OutputStream;
