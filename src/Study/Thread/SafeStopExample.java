@@ -1,4 +1,4 @@
-package Study.Thread;
+package study.Thread;
 
 public class SafeStopExample {
     public static void main(String[] args) {

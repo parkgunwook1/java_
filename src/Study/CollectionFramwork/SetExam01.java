@@ -1,4 +1,4 @@
-package Study.CollectionFramwork;
+package study.CollectionFramwork;
 
 import java.util.HashSet;
 import java.util.Iterator;

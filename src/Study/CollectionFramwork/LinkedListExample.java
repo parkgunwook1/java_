@@ -1,4 +1,4 @@
-package Study.CollectionFramwork;
+package study.CollectionFramwork;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

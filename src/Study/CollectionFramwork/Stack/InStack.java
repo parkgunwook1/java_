@@ -1,4 +1,4 @@
-package Study.CollectionFramwork.Stack;
+package study.CollectionFramwork.Stack;
 
 public class InStack {
     private int[] stk; //스택용 배열

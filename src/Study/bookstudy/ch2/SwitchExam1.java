@@ -1,4 +1,4 @@
-package Study.bookstudy.ch2;
+package study.bookstudy.ch2;
 
 public class SwitchExam1 {
     public static void main(String[]args) {

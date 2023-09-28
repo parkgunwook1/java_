@@ -1,4 +1,4 @@
-package Study.project.userLogin;
+package study.project.userLogin;
 
 public class UserDTO {
 

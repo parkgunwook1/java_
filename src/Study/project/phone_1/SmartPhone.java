@@ -1,4 +1,4 @@
-package Study.project.phone_1;
+package study.project.phone_1;
 
 public class SmartPhone extends Phone{
     //필드 선언

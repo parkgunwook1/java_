@@ -1,4 +1,4 @@
-package Study.bookstudy.ch3;
+package study.bookstudy.ch3;
 
 public class Person {
     String name; //인스턴스 필드(static이 붙어 있지 않음)
