@@ -1,4 +1,4 @@
-package study.CollectionFramwork;
+package study.collectionframwork;
 
 import java.util.ArrayList;
 import java.util.List;
