@@ -1,4 +1,4 @@
-package study.generic1;
+package study.generic;
 
 public class ObjectBoxMain {
     public static void main(String[] args) {
