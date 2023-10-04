@@ -1,4 +1,4 @@
-package Study.project.chat_1;
+package study.project.chat_1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

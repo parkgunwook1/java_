@@ -1,4 +1,4 @@
-package Study.bookstudy.ch3;
+package study.bookstudy.ch3;
 
 public class PersonTest2 {
     public static void main(String[]args) {

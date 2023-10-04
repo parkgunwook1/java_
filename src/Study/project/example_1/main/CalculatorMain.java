@@ -1,6 +1,6 @@
-package Study.project.example_1.main;
+package study.project.example_1.main;
 
-import Study.project.example_1.util.Calculator;
+import study.project.example_1.util.Calculator;
 
 public class CalculatorMain {
     public static void main(String[]args) {

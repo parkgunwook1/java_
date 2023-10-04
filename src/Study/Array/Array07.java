@@ -1,4 +1,4 @@
-package Study.Array;
+package study.array;
 
 import java.util.Arrays;
 public class Array07 {

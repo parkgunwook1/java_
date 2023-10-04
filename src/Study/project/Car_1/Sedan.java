@@ -1,4 +1,4 @@
-package Study.project.Car_1;
+package study.project.Car_1;
 
 public class Sedan extends Car{
     private String carname;

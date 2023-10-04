@@ -1,4 +1,4 @@
-package Study.Array;
+package study.array;
 
 public class EmptyCommandLineArgumentExam {
     public static void main(String[] args) {

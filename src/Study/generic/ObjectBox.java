@@ -1,4 +1,4 @@
-package Study.generic;
+package study.generic;
 
 public class ObjectBox {
     private Object object;

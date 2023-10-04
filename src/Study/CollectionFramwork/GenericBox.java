@@ -1,4 +1,4 @@
-package Study.CollectionFramwork;
+package study.collectionframwork;
 
 public class GenericBox <T> {
     // 타입을 아직 정해주지않음
