@@ -13,3 +13,4 @@ stack.size() - stack 크기 출력
 stack.empty() - stack 비어있는지 체크 (비어있다면 true)
 stack.contains(1) - stack 1이 있는지 체크 (있다면 true)
 
+s
