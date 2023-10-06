@@ -1,4 +1,4 @@
-package school.ch1.together.study.thisex;
+package school.ch1.together.study.this_ex;
 
 public class BirthDay { // this는 생성된 인스턴스를 스스로를 가르키는 예약어이다.
     int day;

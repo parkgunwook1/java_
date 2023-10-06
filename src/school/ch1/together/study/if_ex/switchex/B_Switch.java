@@ -1,4 +1,4 @@
-package school.ch1.together.study.ifex.switchex;
+package school.ch1.together.study.if_ex.switchex;
 
 import java.util.Scanner;
 

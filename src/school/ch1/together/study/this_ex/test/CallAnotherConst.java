@@ -1,4 +1,4 @@
-package school.ch1.together.study.thisex.test;
+package school.ch1.together.study.this_ex.test;
 
 class Person {   //생성자에서 다른 생성자를 호출하는 this
     String name;

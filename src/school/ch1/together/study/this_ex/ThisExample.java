@@ -1,4 +1,4 @@
-package school.ch1.together.study.thisex;
+package school.ch1.together.study.this_ex;
 
 public class ThisExample {
     public static void main(String[] args) {

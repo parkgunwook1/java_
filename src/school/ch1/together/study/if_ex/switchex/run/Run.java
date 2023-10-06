@@ -1,6 +1,6 @@
-package school.ch1.together.study.ifex.switchex.run;
+package school.ch1.together.study.if_ex.switchex.run;
 
-import school.ch1.together.study.ifex.switchex.B_Switch;
+import school.ch1.together.study.if_ex.switchex.B_Switch;
 
 public class Run {
     public static void main(String[] args) {

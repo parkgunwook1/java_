@@ -1,6 +1,6 @@
-package school.ch1.together.study.ifex.run;
+package school.ch1.together.study.if_ex.run;
 
-import school.ch1.together.study.ifex.A_if1;
+import school.ch1.together.study.if_ex.A_if1;
 
 public class Run {
     public static void main(String[] args) {
