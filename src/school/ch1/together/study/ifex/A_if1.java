@@ -1,4 +1,4 @@
-package school.ch1.together.study.control;
+package school.ch1.together.study.ifex;
 
 import java.util.Scanner;
 
@@ -84,12 +84,24 @@ public class A_if1 {
         System.out.println("이름 : ");
         String name = sc3.nextLine();
 
-        if (name == "민경민") {
+        if (name.equals("민경민")) {  // equals 는 객체의 내용끼리 비교한다.   || == 연산자는 자료의 위치 값을 비교한다.
             System.out.println("반가워요");
         }else {
             System.out.println("누구?");
         }
         }
+    public void method7() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("정수(양수)를 입력");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println("짝수이다.");
+        } else {
+            System.out.println("홀수이다.");
+        }
+    }
     }
 
 
