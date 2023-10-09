@@ -15,15 +15,23 @@ public class pratice {
         for (int i = 1; i < a; i++) {
             if (a < 1) {
                 System.out.println("1 이상의 숫자를 입력해주세여.");
-                method();
                 return;
-            }else if (i < a) {
+            }else if (i < a)
                 num1 = i;
                 num2 = a;
-            }else num2 = a;
-                  num1 = i;
-        }for (int i = num1; i < num2; i++) {
-            System.out.println(num1);
+           }for (int i = num2; i < num1; i--) {
+            System.out.println(i);
+        }
+    }
+    public void method2() {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+
+        if (a > 9) {
+            System.out.println("9 이하의 숫자만 입력해주세여");
+        }else {
+
         }
     }
 }
