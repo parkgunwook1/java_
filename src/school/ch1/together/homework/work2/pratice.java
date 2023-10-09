@@ -27,10 +27,16 @@ public class pratice {
 
         int a = sc.nextInt();
 
-        if (a > 9) {
+        if (a > 9) { // 9보다 a가 더 크면 아래 프린트 출력
             System.out.println("9 이하의 숫자만 입력해주세여");
         }else {
-
+            for (int i = a; i <= 9; i++) {
+                System.out.println("====" + i + "단 =====");
+                for (int j = 1; j <= 9; j++) {
+                    System.out.println(i + "*" + j + "=" + " " + i * j);
+                }
+                System.out.println();
+            }
         }
     }
     public void method1() {
@@ -86,6 +92,28 @@ public class pratice {
             }
         }
         System.out.println(" = " + sum);
+    }
+    public void method6() {
+        System.out.println("정수를 입력하세요 : ");
+        int a = sc.nextInt();
+
+        for (int i = 1; i <= a; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public void method7() {
+        System.out.print(" 정수 입력 : ");
+        int a = sc.nextInt();
+
+        for (int i = 1; i <= a; i++) {
+            for (int j = a; j >= i; j--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
 
