@@ -33,7 +33,7 @@ public class pratice {
 
         }
     }
-    public void method2() {
+    public void method1() {
         System.out.println("1이상의 숫자를 입력하세요 : ");
         int a = sc.nextInt();
 
