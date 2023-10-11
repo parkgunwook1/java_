@@ -313,4 +313,44 @@ public class A_array {
             }
         }
     }
+    public void method18() {
+
+        // 월 ~ 일 까지 초기화된 문자열 배열 만들기
+        String[] day = new String[]{"월", "화", "수", "목", "금", "토", "일"};
+
+        // 0부터 6까지 숫자를 입력받고 입력한 숫자와 같은 인덱스에 있는 요일 출력
+        System.out.println("0 ~ 6 사이 숫자 입력 : ");
+        int num = sc.nextInt();
+
+        if (num >= 0 && num <= 6) {
+            System.out.println(day[num]);
+        } else
+            System.out.println("잘못 입력했습니다.");
+    }
+    public void method19() {
+        // 1. 사용자가 배열의 길이 직접 입력하여 그 값만큼 배열 선언 및 할당
+        System.out.print("정수 : ");
+        int a = sc.nextInt();
+        int[] arr = new int[a];
+
+        // 2. 배열 크기만큼 사용자가 값을 직접 입력하여 안덱스에 값을 초기화
+        for (int i = 0; i < arr.length; i++) {
+
+            System.out.print("배열 "+ i + "번째 인덱스에 넣을 값 : ");
+            int x = sc.nextInt();
+            arr[i] += x;
+        }
+        // 3. 배열 전체 값 나열하고 인덱스에 저장된 값들의 합 출력.
+        for (int i = 0; i< arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public void method20() {
+        // 문자열을 입력받아 문자열에 어떤 문자가 들어갔는지 배열에 저장하고 문자의 개수와 함께 출력하세요.
+        System.out.println("문자열 : ");
+        String a = sc.nextLine();
+
+
+    }
+
 }
