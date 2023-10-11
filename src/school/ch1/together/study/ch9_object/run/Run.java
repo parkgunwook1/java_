@@ -1,5 +1,7 @@
 package school.ch1.together.study.ch9_object.run;
 
+import school.ch1.together.study.ch9_object.abstraction.model.Student;
+
 public class Run {
     // 1. 객체란? 사전적 의미로는 현실세계에 독립적으로 존재하는 모든 것.
     // 자바에서 객체 = 클래스에 정의된 내용대로 new 연산자를 통해 메모리 영역에 생성된 것 ( 힙 메모리 )
@@ -18,6 +20,18 @@ public class Run {
     //  3) 그렇게 추려진 속성들을 가지고 내가 구현한 프로그램의 실질적인 목적에 맞춰서 불필요한 속성과 기능은 제거하기
     //  4) 최종적으로 추려진 속성 및 기능을 가지고 어떤 자료형에 어떤 이름으로 사용할 것인지 생각해보기.
     public static void main(String[] args) {
+
+        // Student 클래스 생성해보기
+        // Student 클래스 만들고 나서 객체 생성 - 홍길동 객체 만들기
+        Student hong = new Student("홍길동",20,155.5); // 객체생성 완료.
+        System.out.println("이름 : " +  hong.getName());
+        System.out.println("나이 : " + hong.getAge());
+        System.out.println("키 : " + hong.getHeight());
+
+        Student park = new Student("박건욱",24,178.1);
+        System.out.print(park.getName()+"님의" + park.getAge() + "살이고 키는" + park.getHeight() + "입니다.");
+
+
 
     }
 }
