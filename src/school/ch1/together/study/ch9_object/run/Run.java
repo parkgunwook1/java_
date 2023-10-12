@@ -1,6 +1,7 @@
 package school.ch1.together.study.ch9_object.run;
 
-import school.ch1.together.study.ch9_object.abstraction.model.Student;
+import school.ch1.together.study.ch9_object.abstraction.model.Member;
+import school.ch1.together.study.ch9_object.abstraction.model.vo.Student;
 
 public class Run {
     // 1. 객체란? 사전적 의미로는 현실세계에 독립적으로 존재하는 모든 것.
@@ -23,13 +24,17 @@ public class Run {
 
         // Student 클래스 생성해보기
         // Student 클래스 만들고 나서 객체 생성 - 홍길동 객체 만들기
-        Student hong = new Student("홍길동",20,155.5); // 객체생성 완료.
+        Student hong = new Student("홍길동",20,155.5); // 객체생성 완료. -> 메모리가 메모리 영역에 올라간 상태
         System.out.println("이름 : " +  hong.getName());
         System.out.println("나이 : " + hong.getAge());
         System.out.println("키 : " + hong.getHeight());
 
         Student park = new Student("박건욱",24,178.1);
         System.out.print(park.getName()+"님의" + park.getAge() + "살이고 키는" + park.getHeight() + "입니다.");
+
+        Member meber = new Member();
+        meber.changeName("박건욱");
+        System.out.println("\n" +meber.printName());
 
 
 

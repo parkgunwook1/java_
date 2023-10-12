@@ -10,11 +10,15 @@ public class Pratice {
         System.out.println("정수 : ");
         int a = sc.nextInt();
 
+        if (a <= 0) {
+            System.out.println("양수가 아닙니다.");
+            return;
+        }
         for (int i = 1; i <= a; i++) {
             if (i % 2 == 1) {
-                System.out.println("박");
+                System.out.print("박");
             } else {
-                System.out.println("수");
+                System.out.print("수");
             }
         }
     }
@@ -23,9 +27,9 @@ public class Pratice {
         System.out.println("정수 : ");
         int a = sc.nextInt();
 
-        if (a < 0) {
+        if (a <= 0) {
             System.out.println("양수가 아닙니다.");
-        } else {
+        }
             for (int i = 1; i <= a; i++) {
                 if (i % 2 == 1) {
                     System.out.println("박");
@@ -34,7 +38,6 @@ public class Pratice {
                 }
             }
         }
-    }
     public void pratice3() {
         System.out.println("문자열 : ");
         String a = sc.nextLine();
@@ -44,6 +47,17 @@ public class Pratice {
 
         int count = countOccurrences(a, searchChar);
         System.out.println("문자 '" + searchChar + "'는 문자열에서 " + count + "번 등장합니다.");
+        /*while(true) {
+            System.out.println("더 하시겠습니까? (y,n) :" );
+            char ch2 = sc.nextLine().charAt(0);
+
+            if (ch2 == 'Y' || ch2 == 'y') {
+                pratice3;
+                break;
+            }else if (ch2 == 'N' || ch2 == 'n') {
+                break;
+            }else {
+                System.out.println("잘못 입력했움");*/
     }
 
     // 문자열에서 특정 문자의 등장 횟수를 세는 함수
@@ -59,6 +73,7 @@ public class Pratice {
     public void pratice4() {
         Random ra = new Random();
 
+        // int random = (int)(Math.random() *100 + 1);
         int answer = ra.nextInt(100) + 1; // 1부터 100 사이의 난수 생성
         int attempts = 0;
 
@@ -69,6 +84,7 @@ public class Pratice {
 
             if (guess < 1 || guess > 100) {
                 System.out.println("1부터 100 사이의 숫자를 입력해주세요.");
+                continue;
             } else if (guess < answer) {
                 System.out.println("up");
             } else if (guess > answer) {
@@ -83,14 +99,56 @@ public class Pratice {
         // 1. 사용자의 이름 입력 받기
         System.out.print("당신의 이름을 입력하세요.");
         String name = sc.nextLine();
+        int wine = 0;
+        int lose = 0;
+        int draw = 0;
 
         // 2. 컴퓨터와 가위바위보 하는데 가위인지 보인지 주먹인지 랜덤한 수를 통해 결정
         Random ra = new Random();
         String game =  ra.toString();
 
         // 3. 사용자에게 직접 가위바위보 받기
-        System.out.println("가위바위보 : ");
-        String win = sc.nextLine();
+        while (true) {
+            System.out.println("가위바위보 : ");
+            String rps = sc.nextLine();
+            int com = (int) (Math.random() * 3 + 1);
+
+            switch (rps) {
+                case "가위":
+                    if (com == 1) {
+                        draw++;
+                    }else if(com == 2) {
+                        lose++;
+                    }else {
+                        wine++;
+                    }
+                    break;
+                case "바위":
+                    if (com == 1) {
+                        wine++;
+                    }else if(com == 2) {
+                        draw++;
+                    }else {
+                        lose++;
+                    }
+                    break;
+                case"보":
+                    if (com == 1) {
+                        lose++;
+                    }else if(com == 2) {
+                        wine++;
+                    }else {
+                        draw++;
+                    }
+                    break;
+                case"exit":
+                    System.out.printf("%d전 %d승 %무 %패",(wine+lose+draw),wine,draw,lose);
+                    return;
+                default:
+                    System.out.println("잘못 입력 하셨습니다.");
+            }
+
+        }
 
         // 4. 사용자가 exit 입력하기 전까지 가위바위보 계속 진행
         // 5. exit 들어가면 반복을 멈추고 몇 번의 승부에서 몇 번 이기고 몇번비기고 몇번 졌는지 출력

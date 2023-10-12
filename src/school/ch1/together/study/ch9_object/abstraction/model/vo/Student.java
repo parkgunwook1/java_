@@ -1,4 +1,4 @@
-package school.ch1.together.study.ch9_object.abstraction.model;
+package school.ch1.together.study.ch9_object.abstraction.model.vo;
 
 public class Student {
 

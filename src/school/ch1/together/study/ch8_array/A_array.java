@@ -349,8 +349,78 @@ public class A_array {
         // 문자열을 입력받아 문자열에 어떤 문자가 들어갔는지 배열에 저장하고 문자의 개수와 함께 출력하세요.
         System.out.println("문자열 : ");
         String a = sc.nextLine();
+        int count = 0;
+        System.out.println("문자열에 있는 문자 :");
+        for(int i = 0; i < a.length(); i++) {
 
+            char ch = a.charAt(i);
+            boolean isDuplucated = false;
 
+            for (int j = 0; j < i; j++) {
+                if (ch == a.charAt(j)) {
+                    isDuplucated = true;
+                    break;
+            }
+        }if (isDuplucated) {
+                continue;
+            }
+            System.out.print(ch + (i == (a.length() -1) ? " ": " ,"));
+            count++;
+        }
+        System.out.println("\n 문자개수 : " + count);
+    }
+    public void method21() {
+        // 문자열을 입력받아 문자 하나하나 배열에 넣고 검색할 문자가 문자열에 몇 개 들어가 있는지 개수와 몇 번째 인덱스에 위치하는지 인덱스를 출력하세요.
+        System.out.println("문자열 : ");
+        String str = sc.nextLine();
+
+        char[] charArr = new char[str.length()];
+        for (int i = 0; i < charArr.length; i++) {
+            charArr[i] = str.charAt(i);
+        }
+        System.out.println("문자 : ");
+        char ch = sc.nextLine().charAt(0);
+
+        int count = 0;
+        System.out.printf("%s에 %c가 존재하는 위치(인덱스) : " , str, ch);
+        for (int i = 0; i < charArr.length; i++) {
+            if (charArr[i] == ch) {
+                System.out.print(i+ " ");
+                count++;
+            }
+        }
+        System.out.printf("\n%c 개수 : %d",ch,count);
+    }
+    public void method22() {
+        // 주민등록번호 성별자리 이후부터 *로 가리고 출력, 단, 원본 배열 값은 변경없이 배열 복사본으로 변경
+        System.out.print("주민등록번호(-포함) : " );
+        String resNo = sc.nextLine();
+
+        char[] originResNo = resNo.toCharArray();
+        char[] copyResNo = originResNo.clone();
+
+        for (int i = 8; i < copyResNo.length; i++) {
+            copyResNo[i] = '*';
+        }
+        for (int i = 0; i <copyResNo.length; i++) {
+            System.out.print(copyResNo[i]);
+        }
+    }
+    public void method23() {
+        // 10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
+        // 1 ~ 10 사이의 난수 발생시켜 배열에 초기화 후 배열 전체값, 최대값, 최소값 출력
+
+        int [] arr = new int[10];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (Math.random() *10 + 1);
+            System.out.println(arr[i] + " ");
+        }
+        // 배열 정렬할 수 있는 메서드
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+        System.out.println("최대값 : " + arr[arr.length - 1]);
+        System.out.println("최소값 : " + arr[0]);
     }
 
 }
