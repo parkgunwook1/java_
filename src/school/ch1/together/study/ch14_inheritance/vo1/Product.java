@@ -8,10 +8,13 @@ public class Product {
 
     public Product() {}
 
+    // String 반환값으로 return 을 해준다.
+    // 반환을 안해주고 싶으면 void 사용
     public String information() {
         return brand+" , " +pCode +", " +pName + ", " +price;
     }
 
+    // 4개 매개변수를 가진 생성자
     public Product(String brand, String pCode, String pName, int price) {
         this.brand = brand;
         this.pCode = pCode;
