@@ -91,7 +91,7 @@ public class EmployeeMenu {
     public void deleteEmp() {
         // 사원 삭제
 
-        System.out.println("장밀 삭제하시겠습니까? (y/n)");
+        System.out.println("정말 삭제하시겠습니까? (y/n)");
         char ch = sc.nextLine().charAt(0);
         if (ch == 'y' ) {
             System.out.println("데이터 삭제에 성공하였습니다.");

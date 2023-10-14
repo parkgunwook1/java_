@@ -14,35 +14,38 @@ public class EmployeeController {
     }
 
     // 매개변수 있는 생성자 이용하여 데이터 저장하는 메소드
-    public void  add(int empNo, String name, char gender, String phone, String dept, int salary, double bonus) {
+    public void add(int empNo, String name, char gender, String phone, String dept, int salary, double bonus) {
 
-          e.setEmpNo(empNo);
-          e.setName(name);
-          e.setGender(gender);
-          e.setPhone(phone);
-          e.setDept(dept);
-          e.setSalary(salary);
-          e.setBonus(bonus);
+        e.setEmpNo(empNo);
+        e.setName(name);
+        e.setGender(gender);
+        e.setPhone(phone);
+        e.setDept(dept);
+        e.setSalary(salary);
+        e.setBonus(bonus);
     }
 
     // setter로 정보 수정
-    public void modify(String phone){
+    public void modify(String phone) {
         e.setPhone("");
     }
+
     // setter로 정보 수정
     public void modify(int salary) {
 
     }
+
     // setter로 정보 수정
     public void modify(double bonus) {
 
     }
+}
     // 객체 삭제하는 메소드
-    public Employee remove () {
+    /*public Employee remove () {
 
     }
     // 객체 저장된 데이터 가져와 반환하는 메소드
     public String inform() {
 
     }
-}
+}*/
