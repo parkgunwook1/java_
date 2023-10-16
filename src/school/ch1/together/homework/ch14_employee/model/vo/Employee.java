@@ -33,10 +33,11 @@ public class Employee {
 
     }
 
-    // 직원 정보 반환
-   /* public String printEmployee() {
-        return;
-    }*/
+
+   public String printEmployee() {
+       return name + "" + gender + " " + phone + " " + dept + "" + salary + "" + bonus;
+   }
+
 
     public int getEmpNo() {
         return empNo;
