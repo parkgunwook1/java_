@@ -6,9 +6,7 @@ public class Book /*extends Object*/ {
     private String author;
     private int price;
 
-    public Book() {
-
-    }
+    public Book() {}
 
     public Book(String title, String author, int price) {
         this.title = title;
