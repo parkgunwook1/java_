@@ -30,6 +30,16 @@ class Solution1 {
     public String[] solution1(String[] players, String[] callings) {
         String[] answer = {};
 
+        players = new String[]{"mumu","soe","poe"}; // players : 1등부터 현재 등수 순서대로 담긴 문자열 배열
+        callings = new String[] {"soe","poe"};
+//        String[] result = new String[]
+
+        for (int i = 0; i < players.length; i++) {
+
+        }
+
+
+
         return answer;
     }
 

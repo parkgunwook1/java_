@@ -6,10 +6,10 @@ public class A_While {
     Scanner sc = new Scanner(System.in);
     public void method1() {
         int treeHit = 0;
-        while (treeHit < 10) {
+        while (treeHit < 10) { // while 반복문
             treeHit++;
             System.out.println("나무를" + treeHit + "번 찍었습니다.");
-            if (treeHit == 10) {
+            if (treeHit == 10) { // if 조건문
                 System.out.println("나무 넘어갑니다.");
             }
         }
