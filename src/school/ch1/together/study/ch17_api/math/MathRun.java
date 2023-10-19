@@ -1,4 +1,4 @@
-package school.ch1.together.study.ch17_api.run;
+package school.ch1.together.study.ch17_api.math;
 
 
 public class MathRun {
