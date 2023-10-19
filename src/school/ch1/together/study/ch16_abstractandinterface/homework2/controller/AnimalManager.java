@@ -16,5 +16,8 @@ public class AnimalManager {
         for (int i = 0; i < animals.length; i++) {
             animals[i].speak();
         }
+//        for (Animal ani : animals) {
+//            ani.speak();
+//        }
     }
 }

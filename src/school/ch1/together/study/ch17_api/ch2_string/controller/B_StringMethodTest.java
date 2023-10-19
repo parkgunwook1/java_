@@ -1,6 +1,5 @@
-package school.ch1.together.study.ch17_api.string.controller;
+package school.ch1.together.study.ch17_api.ch2_string.controller;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class B_StringMethodTest {

@@ -1,4 +1,4 @@
-package school.ch1.together.study.ch17_api.string.controller;
+package school.ch1.together.study.ch17_api.ch2_string.controller;
 
 public class A_StringPoolTest {
 
