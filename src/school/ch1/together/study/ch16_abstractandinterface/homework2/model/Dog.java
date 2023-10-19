@@ -2,16 +2,8 @@ package school.ch1.together.study.ch16_abstractandinterface.homework2.model;
 
 public class Dog extends Animal{
 
-    public static String PLACE = "애견카페";
+    public static final String PLACE = "애견카페";
     private int weight;
-
-    public static String getPLACE() {
-        return PLACE;
-    }
-
-    public static void setPLACE(String PLACE) {
-        Dog.PLACE = PLACE;
-    }
 
     public Dog() {}
 
