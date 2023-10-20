@@ -20,7 +20,7 @@ public class C_StringTokenizerTest {
             System.out.println(str1);
         }
         // 방법 2. 분리된 각각의 문자열들을 토큰으로 취급하고 싶을때
-        // java.uti;/StringTokenizer 클래스를 이용한다.
+        // java.util/StringTokenizer 클래스를 이용한다.
         // StringTokenizer stn = new StringTokenizer(분리싴자 하는 문자열, 구분자);
         StringTokenizer stn = new StringTokenizer(str," ");
 

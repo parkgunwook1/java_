@@ -13,7 +13,7 @@ public class A_UncheckedException {
     * - ArrayIndexOutOfBoundsException : 배열의 부적절한 인덱스로 접근할 때 발생하는 예외.
     * - NegativeArraySizeException     : 배열의 크기를 음수로 지정할 경우 발생하는 예외
     * - ClassCaseException             : 허용할 수 없는 형변환이 진행될 경우 발생하는 예외.
-    * ex ) Object ob = new String("d")l  ->  ((Integer)ob) 형변환 불가.
+    * ex ) Object ob = new String("d");  ->  ((Integer)ob) 형변환 불가.
     * - NullPointerException           : 참조변수가 null 값을 저장함에도 불구하고, 특정 필드 및 메서드에 접근하려고 할 때 발생한다.
     * ex ) Child1 ch = null; 주소값.toString
     *

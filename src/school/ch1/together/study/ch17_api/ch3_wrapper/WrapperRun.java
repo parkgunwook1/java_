@@ -23,12 +23,13 @@ public class WrapperRun {
         Integer i1 = num1;
         Integer i2 = num2;
 
+
         // 기본 자료형에서 객체의 메서드를 활용하고 싶을때 사용.
         System.out.println(i1.equals(i2));
         System.out.println(i1.hashCode());
 
         System.out.println(i1.compareTo(i2));
-        // a.compareTo(b) : a어ㅣ b를 비교해서 a가 b보다 크면 1 반환, 작으면 -1, 같으면 0을 반환
+        // a.compareTo(b) : a와 b를 비교해서 a가 b보다 크면 1 반환, 작으면 -1, 같으면 0을 반환
 
         // Wrapper 자료형 변수 => 기본자료형 (UnBoxing)
         int num3 = i1;
@@ -43,13 +44,13 @@ public class WrapperRun {
         // 1. String --> 기본자료형 --> 파싱한다.
         //  바꿀자료형의 Wrapper클래스.parseXXX(변환할 문자열)
 
-        int i = Integer.parseInt(str1); // "10" -> 10
-        Double d = Double.parseDouble(str2);
+        int i = Integer.parseInt(str1); // "10" -> 10 문자열을 정수형으로 바꾼다 : parseInt
+        Double d = Double.parseDouble(str2); // 문자열을 더블형으로 바꾼다.
 
         // 2. 기본자료형 ---> String
         //      10    --->   "10"
         String strI = i+"";
-        String strI2 = String.valueOf(i);
+        String strI2 = String.valueOf(i); // valueOf = 괄호안의 객체를 String 객체로 변환
         String strI3 = Integer.valueOf(i).toString();
 
         String strDD = String.valueOf(d); // 15.3 ==> "15.3"
