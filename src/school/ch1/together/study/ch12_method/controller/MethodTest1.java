@@ -19,7 +19,7 @@ public class MethodTest1 {
     public int method2() {
         System.out.println("매개변수가 없고 반환값은 있는 메서드이다.");
 
-        return 1;
+        return 1; //반환값
     }
 
     // 3. 매개변수가 있고, 반환값은 없는 메소드

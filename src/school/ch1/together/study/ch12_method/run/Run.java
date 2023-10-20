@@ -12,6 +12,6 @@ public class Run {
 //        int a = mt1.method2(); // 2번
 //        System.out.println(a);
 
-        MethodTest2.method();
+        MethodTest2.method(); // 스태틱 필드는 new 사용 안하고 도트연산자로 바로 접근 가능하다.
     }
 }

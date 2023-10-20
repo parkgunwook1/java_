@@ -13,7 +13,7 @@ public class Circle {
     }
     public void getAreaOfCircle() {
         // 원 둘레 : 2 * 파이 * 반지름
-        System.out.println(2 * PI * radius );
+        System.out.println(2 * Math.PI * radius );
 
     }
     public void getSizeOfCircle() {

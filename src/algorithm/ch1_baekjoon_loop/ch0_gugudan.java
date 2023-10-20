@@ -1,4 +1,4 @@
-package algorithm.ch0_baekjoon_3;
+package algorithm.ch1_baekjoon_loop;
 
 import java.util.Scanner;
 
