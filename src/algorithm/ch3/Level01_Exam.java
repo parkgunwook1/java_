@@ -27,19 +27,32 @@ class Solution1 {
     // 해설진이 부른 이름을 담은 문자열 배열 callings
     // 경주가 끝났을 때 선수들의 이름을 1등부터 등수 순서대로 배열에 담아 return 하는 solution 함수 완성
 
-    public String[] solution1(String[] players, String[] callings) {
-        String[] answer = {};
 
-        players = new String[]{"mumu","soe","poe"}; // players : 1등부터 현재 등수 순서대로 담긴 문자열 배열
-        callings = new String[] {"soe","poe"};
-//        String[] result = new String[]
+    // 아래와 같이 문제를 풀면 실패한다.
+    public int findRunner(String[] players, String callName) {
+        int idx = 0;
 
         for (int i = 0; i < players.length; i++) {
-
+            if (callName.equals(players[i])) {
+                idx = i;
+            }
         }
+        return idx;
+    }
+    public void swapRunner(String[] players, int idx){
+        String temp = players[idx - 1];
+        players[idx - 1] = players[idx];
+        players[idx] = temp;
+    }
+    public String[] solution(String[] players, String[] callings) {
+        String[] answer = new String[players.length];
 
+        System.arraycopy(players, 0, answer, 0, players.length);
 
-
+        for (int i = 0; i < callings.length; i++) {
+            int idx = findRunner(answer, callings[i]);
+            swapRunner(answer, idx);
+        }
         return answer;
     }
 
