@@ -1,4 +1,4 @@
-package school.ch1.together.study.ch19_io.file.run;
+package school.ch1.together.study.ch19_io.file.run.ch01_byte.model;
 
 import java.io.File;
 import java.io.IOException;

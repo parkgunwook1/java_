@@ -1,5 +1,6 @@
 package school.ch1.together.study.ch19_io.file.run.ch01_byte.model.dao;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -52,6 +53,44 @@ public class FileByteDao {
                 e.printStackTrace();
             }
         }
+    }
+    // 외부매체(파일) --- > 프로그램
+    // 입력 : 파일로부터 데이터를 읽어들이겠다.
+    public void fileRead() {
+        // FileInputStream : 파일로부터 데이터를 1바이트씩 입력받는 스트림.
+        FileInputStream fis = null;
 
+        try {
+            // 1. FileInputStream 객체로 입력 스트림 생성
+            fis = new FileInputStream("a_byte.txt"); // 존재하는 파일의 경로 제시
+
+            // 방법 1. 반복문을 활용하여 파일내부의 모든 데이터 읽어들이기
+//            while(true) {
+//                int value = 0;
+//                value = fis.read();
+//                if (value == -1) break;
+//                System.out.print((char)value);  // ab�cdedeab�cdede
+//            }
+            int value = 0;
+            // 방법 2
+            while ((value = fis.read()) != -1) {
+                System.out.print((char)value);
+            }
+
+            // 2. 통로로 데이터를 입력받기
+//            System.out.println(fis.read()); // 1바이트 단위로 하나씩 데이터를 읽어들이는 함수.
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            // 3. 다쓴 자원 반납
+            try {
+                fis.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }
