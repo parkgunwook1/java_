@@ -77,6 +77,7 @@ public class ScoreMenu {
        try {
            DataInputStream dis = new DataInputStream(new FileInputStream(file));
            ScoreMenu sc = new ScoreMenu();
+           sc.saveScore();
            while (true) {
                // 모든 파일이 읽어졌을때 나오는 EOFException을 이용하여
                // EOFException가 일어났을 때 읽은 횟수, 전체 합계, 전체 평균 출력

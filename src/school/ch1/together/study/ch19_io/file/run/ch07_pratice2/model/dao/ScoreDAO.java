@@ -22,6 +22,7 @@ public class ScoreDAO {
         }
     }
     public DataInputStream readScore() throws FileNotFoundException {
+        File file = new File("")
 
     }
 }

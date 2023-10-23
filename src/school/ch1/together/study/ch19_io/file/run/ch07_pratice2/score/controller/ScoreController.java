@@ -15,6 +15,6 @@ public class ScoreController {
 
     }
     public DataInputStream readScore() throws FileNotFoundException {
-
+        return sd.readScore(); // ScoreDAO의 readScore 메소드를 호출하여 DataInputStream 반환
     }
 }
