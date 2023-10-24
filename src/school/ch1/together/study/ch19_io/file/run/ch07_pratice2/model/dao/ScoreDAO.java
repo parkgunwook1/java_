@@ -7,7 +7,7 @@ public class ScoreDAO {
     public void saveScore(String name, int kor, int eng, int math, int sum, double avg) {
         File file = new File("student.txt");
 
-        try(DataOutputStream os = new DataOutputStream(new FileOutputStream(file))) {
+        try (DataOutputStream os = new DataOutputStream(new FileOutputStream(file))) {
             os.writeUTF(name);
             os.writeInt(kor);
             os.writeInt(eng);
@@ -21,8 +21,10 @@ public class ScoreDAO {
             e.printStackTrace();
         }
     }
-    public DataInputStream readScore() throws FileNotFoundException {
-        File file = new File("")
-
-    }
 }
+//    public DataInputStream readScore() throws FileNotFoundException {
+//        File file = new File("");
+//
+//        return file;
+//    }
+//}
