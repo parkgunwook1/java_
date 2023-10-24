@@ -117,4 +117,4 @@ serialVersionUID 필드
 - 직렬화한 클래스와 같은 클래스임을 알려주는 식별화 역할로 컴파일 시 jvm이 자동으로 serialVertionUID 정적 필드를 추가해
 - 별도로 작성하지 않아도 오류는 나지 않지만 자동 생성 시 역직렬화에서 예상하지 못한
 - InvalidClassException을 유발할 수 있어 명시 권장한다.
-private static final long seriaLVersionUID = -6423919775137290062L;
+private static final long seriaLVersionUID = -6423919775137290062L;s
