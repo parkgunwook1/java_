@@ -91,7 +91,6 @@ HashSet
 LinkedHashSet
 - HashSet과 거의 동일하지만 Set에 추가되는 순서를 유지한다는 점이 다르다.
 
-
 Enumeration, iterator, ListIterator
 컬렉션에 저장된 요소를 접근하는데 사용되는 인터페이스
 
@@ -120,8 +119,8 @@ HashMap
 - 때문에 키 타입은 hashCode와 equals()메소드가 재정의되어있는 String타입을 주로 사용
 예) Map <K,V> map = new HashMap(K,V)();
 
-Hahtable
-- 키 객체 만드는 법은 HashMap과 동일하나 Hashtable은 스레드 동기화가 된
+Hashtable
+- 키 객체 만드는 법은 HapashM과 동일하나 Hashtable은 스레드 동기화가 된
   상태이기 때문에, 복수의 스레드가 동시에 Hashtable에 접근해 객체를 추가, 삭제 하더라도 스레드에 안전 (Thread safe)
 예) Map <k,v> map = new HashTable<k,v>();
 
