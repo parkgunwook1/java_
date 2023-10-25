@@ -31,7 +31,9 @@ public class LotteryController {
     public HashSet winObject() {
         Random random = new Random();
 
-        ArrayList lottery = random
+        ArrayList<> arrayList = new ArrayList<>();
+
+        if (arrayList.size() < 4)
     }
     public TreeSet sortedWinObject() {
 

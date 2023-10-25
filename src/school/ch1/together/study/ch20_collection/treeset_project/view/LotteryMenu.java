@@ -1,9 +1,11 @@
 package school.ch1.together.study.ch20_collection.treeset_project.view;
 
+import school.alone.ch_1.generics.Plastic;
 import school.ch1.together.study.ch20_collection.treeset_project.controller.LotteryController;
 import school.ch1.together.study.ch20_collection.treeset_project.mode.vo.Lottery;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -105,21 +107,37 @@ public class LotteryMenu {
         }
     }
     public void winObject() {
-        Set<Lottery> lotterySet = lc.winObject();
+        Set<Lottery> lotterySet = lc.sortedWinObject();
 
-        if (lotterySet.isEmpty()) {
-            System.out.println("당첨 대상이 없습니다.");
-        }else {
-            System.out.println("당첨 대상 목록:");
             for (Lottery lottery : lotterySet) {
                 System.out.println(lottery);
             }
         }
-    }
-    public void sortedWinObject() {
 
-    }
+    public void sortedWinObject() {
+        Set<Lottery> set = new HashSet<>();
+        Iterator<E> iterator = set.iterator();
+
+        while (iterator.hasNext()) {
+            E e = iterator.next();
+        }
+     }
     public void searchWinner() {
 
+        System.out.println("검색할 대상의 이름과 핸드폰 번호를 입력하세요.");
+
+        System.out.println("이름 : ");
+        String name = sc.nextLine();
+
+        System.out.println("핸드폰 번호 ('-' 빼고) : ");
+        String phone = sc.nextLine();
+
+        Lottery lottery = new Lottery(name,phone);
+
+        if (lc.searchWinner(lottery)) {
+            System.out.println("축하합니다.");
+        } else {
+            System.out.println("안타깝지만 당첨 목록에 존재하지 않습니다.");
+        }
     }
 }
