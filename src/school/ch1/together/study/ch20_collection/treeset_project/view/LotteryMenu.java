@@ -105,8 +105,16 @@ public class LotteryMenu {
         }
     }
     public void winObject() {
-        Set<Lottery> lotterySet = new HashSet<>();
-        System.out.println(lotterySet);
+        Set<Lottery> lotterySet = lc.winObject();
+
+        if (lotterySet.isEmpty()) {
+            System.out.println("당첨 대상이 없습니다.");
+        }else {
+            System.out.println("당첨 대상 목록:");
+            for (Lottery lottery : lotterySet) {
+                System.out.println(lottery);
+            }
+        }
     }
     public void sortedWinObject() {
 

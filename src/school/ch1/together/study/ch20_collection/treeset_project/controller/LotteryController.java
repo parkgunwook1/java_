@@ -31,7 +31,7 @@ public class LotteryController {
     public HashSet winObject() {
         Random random = new Random();
 
-        ArrayList
+        ArrayList lottery = random
     }
     public TreeSet sortedWinObject() {
 
