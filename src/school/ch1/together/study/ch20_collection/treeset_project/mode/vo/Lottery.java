@@ -12,7 +12,7 @@ public class Lottery {
     public Lottery(String name, String phone) {
         this.name = name;
         this.phone = phone;
-    }
+    }s
 
     public String getName() {
         return name;
