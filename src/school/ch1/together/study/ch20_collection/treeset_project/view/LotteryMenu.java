@@ -1,6 +1,5 @@
 package school.ch1.together.study.ch20_collection.treeset_project.view;
 
-import school.alone.ch_1.generics.Plastic;
 import school.ch1.together.study.ch20_collection.treeset_project.controller.LotteryController;
 import school.ch1.together.study.ch20_collection.treeset_project.mode.vo.Lottery;
 
@@ -98,28 +97,24 @@ public class LotteryMenu {
         System.out.print("핸드폰 번호('-빼고')");
         String phone = sc.nextLine();
 
-        Lottery lottery = new Lottery(name,phone);
+//        Lottery lottery = new Lottery(name,phone);
 
-        if (lc.deleteObject(lottery)) {
+        if (lc.deleteObject( new Lottery(name,phone))) {
             System.out.println("삭제 완료 되었습니다.");
         } else {
             System.out.println("존재하지 않는 대상입니다.");
         }
     }
     public void winObject() {
-        Set<Lottery> lotterySet = lc.sortedWinObject();
+        System.out.println(lc.winObject());
 
-            for (Lottery lottery : lotterySet) {
-                System.out.println(lottery);
-            }
         }
 
     public void sortedWinObject() {
-        Set<Lottery> set = new HashSet<>();
-        Iterator<E> iterator = set.iterator();
+       Iterator<Lottery> iter = lc.sortedWinObject().iterator();
 
-        while (iterator.hasNext()) {
-            E e = iterator.next();
+       while (iter.hasNext()) {
+           System.out.println(iter.next());
         }
      }
     public void searchWinner() {
@@ -132,9 +127,9 @@ public class LotteryMenu {
         System.out.println("핸드폰 번호 ('-' 빼고) : ");
         String phone = sc.nextLine();
 
-        Lottery lottery = new Lottery(name,phone);
+        boolean result = lc.searchWinner(new Lottery(name,phone));
 
-        if (lc.searchWinner(lottery)) {
+        if (result) {
             System.out.println("축하합니다.");
         } else {
             System.out.println("안타깝지만 당첨 목록에 존재하지 않습니다.");
