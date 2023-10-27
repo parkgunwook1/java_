@@ -88,7 +88,8 @@ public class GenericRun < G ,  Generic>{ // 글자 숫자는 몇글자든 상관
         // 1. 상한 경계 설정 : ?가 가질수 있는 자료형의 최대값을 설정할 수 있음. (상위클래스 제한)
         // [표현법]
         // 클래스명 < ? extends T > : T와 T의 자손클래스만 사용 가능.
-        List<? extends Parent> upperBoundary = new ArrayList<>();
+        List<? extends Parent> upperBoundary = new ArrayList<>(); // 상한 경계 = extneds
+        // extends Parent는 Parent이거나 Parent의 자식이 올 수 있다.
         for (Parent p  : upperBoundary) {
             // UpperBoundary에는 어떤값이 들어갔는지 모르지만, 최소한 Parent를 상속 받았음으로
             // 다형성의 원래에 의해 자동형변환이 가능하다. 즉, ?가 Parent로 형변환
@@ -109,7 +110,7 @@ public class GenericRun < G ,  Generic>{ // 글자 숫자는 몇글자든 상관
         // (값 추가시 사용)
         // [표현법]
         // 클래스명 < ? super T > : T와 T의 조상클래스만 가능.
-        List<? super  Parent> lowerBoundary = new ArrayList<>();
+        List<? super  Parent> lowerBoundary = new ArrayList<>();  // 하향 경계 => super
 
         // ok? Child1의 super Parent이기 때문에 ? 경계선상 더 밑에 존재하므로 updasting 발생
 //        lowerBoundary.add(new Chid1());
