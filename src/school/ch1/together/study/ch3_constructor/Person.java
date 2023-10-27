@@ -1,4 +1,4 @@
-package school.ch1.together.study.ch3_constrictor;
+package school.ch1.together.study.ch3_constructor;
 
 public class Person { // Person 클래스에서 여러 가지 생성자를 제공한다면 이 클래스를 사용하여 인스턴스를 만드는 경우에 필요한 생성자를 골라서 사용할 수 있다.
     String name;

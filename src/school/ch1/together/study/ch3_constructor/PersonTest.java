@@ -1,4 +1,4 @@
-package school.ch1.together.study.ch3_constrictor;
+package school.ch1.together.study.ch3_constructor;
 
 public class PersonTest {
     public static void main(String[] args) {
