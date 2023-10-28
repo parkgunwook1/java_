@@ -2,6 +2,7 @@ package school.ch1.together.study.ch5_this_ex.test;
 
 class Person {   //생성자에서 다른 생성자를 호출하는 this
     String name;
+
     int age;
 
     Person() {

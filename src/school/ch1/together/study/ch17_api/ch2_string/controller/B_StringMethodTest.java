@@ -52,7 +52,7 @@ public class B_StringMethodTest {
         System.out.println(Arrays.toString(arr));
 
         // 9. static valueof(char[] data) : String
-        System.out.println(String.valueOf(arr));
+        System.out.println(String.valueOf(arr)); // > valueof() -> () 안에 있는 것을 String 형변환
         System.out.println(String.valueOf(1));
     }
 
