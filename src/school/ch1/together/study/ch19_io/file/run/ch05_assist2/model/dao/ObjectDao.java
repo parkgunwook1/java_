@@ -25,6 +25,7 @@ public class ObjectDao {
         }
     }
 
+
     public void fileRead() {
 
         // FileInputStream : 파일로부터 데이터를 1Byte로 읽어들이는 기반 스트림
