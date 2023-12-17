@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aad759609f47348a823144a11e99b43a31f918fb
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -11,6 +15,15 @@ target/
 *.iws
 *.iml
 *.ipr
+<<<<<<< HEAD
+=======
+=======
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+>>>>>>> 2d6b4de0dae129dc81fe1ca2e70ad6e02eb8c6d4
+>>>>>>> aad759609f47348a823144a11e99b43a31f918fb
 
 ### Eclipse ###
 .apt_generated
@@ -20,6 +33,15 @@ target/
 .settings
 .springBeans
 .sts4-cache
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+>>>>>>> 2d6b4de0dae129dc81fe1ca2e70ad6e02eb8c6d4
+>>>>>>> aad759609f47348a823144a11e99b43a31f918fb
 
 ### NetBeans ###
 /nbproject/private/
@@ -27,12 +49,42 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
+<<<<<<< HEAD
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+=======
+<<<<<<< HEAD
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+=======
+>>>>>>> 2d6b4de0dae129dc81fe1ca2e70ad6e02eb8c6d4
+>>>>>>> aad759609f47348a823144a11e99b43a31f918fb
 
 ### VS Code ###
 .vscode/
 
 ### Mac OS ###
+<<<<<<< HEAD
 .DS_Store
+=======
+<<<<<<< HEAD
+.DS_Store
+
+# Ignore IntelliJ IDEA files
+.idea/
+
+# Ignore Maven target directory
+target/
+
+# Ignore Eclipse files
+.classpath
+.project
+.settings/
+
+.pom.xml/
+=======
+.DS_Store
+>>>>>>> 2d6b4de0dae129dc81fe1ca2e70ad6e02eb8c6d4
+>>>>>>> aad759609f47348a823144a11e99b43a31f918fb

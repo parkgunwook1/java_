@@ -1,0 +1,4 @@
+hasNext : 뭔가 다음에 있으면 가져오는 것
+- boolean 타입으로 반환한다. 즉, true/false로 반환
+
+next : 매개변수 혹은 iterator 되는 타입으로 반환

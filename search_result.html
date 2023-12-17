@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="ko">
+
+                                                                                <head>
+                <script type="text/javascript">if (!window.T) { window.T = {} }
+window.T.config = {"TOP_SSL_URL":"https://www.tistory.com","PREVIEW":false,"ROLE":"guest","PREV_PAGE":"","NEXT_PAGE":"","BLOG":{"id":1779262,"name":"bozeury","title":"따..딱히 공부하려고 포스팅하는 건 아니니까..!","isDormancy":false,"nickName":"보즈리"},"NEED_COMMENT_LOGIN":false,"COMMENT_LOGIN_CONFIRM_MESSAGE":"","LOGIN_URL":"https://www.tistory.com/auth/login/?redirectUrl=https://bozeury.tistory.com/entry/%25ED%259E%2599Heap%25EA%25B3%25BC-%25EC%258A%25A4%25ED%2583%259DStack%25EC%259D%2598-%25EC%25B5%259C%25EB%258C%2580-%25ED%2581%25AC%25EA%25B8%25B0","DEFAULT_URL":"https://bozeury.tistory.com","USER":{"name":null,"homepage":null,"id":0,"profileImage":null},"SUBSCRIPTION":{"status":"none","isConnected":false,"isPending":false,"isWait":false,"isProcessing":false,"isNone":true},"IS_LOGIN":false,"HAS_BLOG":false,"IS_SUPPORT":false,"TOP_URL":"http://www.tistory.com","JOIN_URL":"https://www.tistory.com/member/join","ROLE_GROUP":"visitor"};
+window.appInfo = {"domain":"tistory.com","topUrl":"https://www.tistory.com","loginUrl":"https://www.tistory.com/auth/login","logoutUrl":"https://www.tistory.com/auth/logout"};
+window.initData = {};
+
+window.TistoryBlog = {
+    basePath: "",
+    url: "https://bozeury.tistory.com",
+    tistoryUrl: "https://bozeury.tistory.com",
+    manageUrl: "https://bozeury.tistory.com/manage",
+    token: "s2mQlFdNmPswKzRYSt5O8DHbPvCSAvtKX2EVq1Dnnncr0ldFQ4bO9SrqysyT01+2"
+};
+var servicePath = "";
+var blogURL = "";</script>
+
+                
+                
+                
+                        <!-- BusinessLicenseInfo - START -->
+        
+            <link href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/plugin/BusinessLicenseInfo/style.css" rel="stylesheet" type="text/css"/>
+
+            <script>function switchFold(entryId) {
+    var businessLayer = document.getElementById("businessInfoLayer_" + entryId);
+
+    if (businessLayer) {
+        if (businessLayer.className.indexOf("unfold_license") > 0) {
+            businessLayer.className = "business_license_layer";
+        } else {
+            businessLayer.className = "business_license_layer unfold_license";
+        }
+    }
+}
+</script>
+
+        
+        <!-- BusinessLicenseInfo - END -->
+        <!-- DaumShow - START -->
+        <style type="text/css">#daumSearchBox {
+    height: 21px;
+    background-image: url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bg_search2_2.gif);
+    margin: 5px auto;
+    padding: 0;
+}
+
+#daumSearchBox input {
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#daumSearchBox #daumLogo {
+    width: 34px;
+    height: 21px;
+    float: left;
+    margin-right: 5px;
+    background-image: url(//i1.daumcdn.net/img-media/tistory/img/bg_search1_2_2010ci.gif);
+}
+
+#daumSearchBox #show_q {
+    background-color: transparent;
+    border: none;
+    font: 12px Gulim, Sans-serif;
+    color: #555;
+    margin-top: 4px;
+    margin-right: 15px;
+    float: left;
+}
+
+#daumSearchBox #show_btn {
+    background-image: url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bt_search_2.gif);
+    width: 37px;
+    height: 21px;
+    float: left;
+    margin: 0;
+    cursor: pointer;
+    text-indent: -1000em;
+}
+</style>
+
+        <!-- DaumShow - END -->
+
+<!-- System - START -->
+
+<!-- System - END -->
+
+        <!-- TistoryProfileLayer - START -->
+        <link href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/plugin/TistoryProfileLayer/style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/plugin/TistoryProfileLayer/script.js"></script>
+
+        <!-- TistoryProfileLayer - END -->
+
+                
+                <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="//t1.daumcdn.net/tistory_admin/lib/lightbox/js/lightbox-v2.10.0.min.js" defer></script>
+<script type="text/javascript" src="//t1.daumcdn.net/tiara/js/v1/tiara.min.js"></script><meta name="referrer" content="always"/>
+<meta name="google-adsense-platform-account" content="ca-host-pub-9691043933427338"/>
+<meta name="google-adsense-platform-domain" content="tistory.com"/>
+<meta name="description" content="프로그래밍을 하면서 스택 영역, 힙 영역이라는 말을 많이 들어봤을 것이다.스택이나 힙은 한 프로세스 내에 존재하는 메모리 영역인데, 이 스택과 힙 메모리 공간을 얼마나 할당할 수 있는지 알아보고자 한다. 위 그림은 번지에 따른 메모리 구조이다. 즉, 위에 있을 수록 주소가 높고(High Address) 밑에 있을 수록 주소가 낮다(Low Address).크게 코드 영역, 데이터 영역으로 나뉘고, 작게는 데이터 영역 내에서 힙, 스택으로 나뉜다. 하지만 처음부터 모든 메모리 공간을 사용하지는 않는다. 보통 힙과 스택 사이가 비어있는데, 이는 미사용 공간으로 처음부터 힙과 스택이 할당되어 있는게 아니라는 의미이다. 이들은 메모리 공간이 필요할 때 할당이 된다. 스택이라면 함수가 호출될 때, 힙이라면 동적으로.."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://bozeury.tistory.com/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0"/>
+<meta property="og.article.author" content="보즈리"/>
+<meta property="og:site_name" content="따..딱히 공부하려고 포스팅하는 건 아니니까..!"/>
+<meta property="og:title" content="힙(Heap)과 스택(Stack)의 최대 할당 크기"/>
+<meta name="by" content="보즈리"/>
+<meta property="og:description" content="프로그래밍을 하면서 스택 영역, 힙 영역이라는 말을 많이 들어봤을 것이다.스택이나 힙은 한 프로세스 내에 존재하는 메모리 영역인데, 이 스택과 힙 메모리 공간을 얼마나 할당할 수 있는지 알아보고자 한다. 위 그림은 번지에 따른 메모리 구조이다. 즉, 위에 있을 수록 주소가 높고(High Address) 밑에 있을 수록 주소가 낮다(Low Address).크게 코드 영역, 데이터 영역으로 나뉘고, 작게는 데이터 영역 내에서 힙, 스택으로 나뉜다. 하지만 처음부터 모든 메모리 공간을 사용하지는 않는다. 보통 힙과 스택 사이가 비어있는데, 이는 미사용 공간으로 처음부터 힙과 스택이 할당되어 있는게 아니라는 의미이다. 이들은 메모리 공간이 필요할 때 할당이 된다. 스택이라면 함수가 호출될 때, 힙이라면 동적으로.."/>
+<meta property="og:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F255DDA43576046DD11"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@TISTORY"/>
+<meta name="twitter:title" content="힙(Heap)과 스택(Stack)의 최대 할당 크기"/>
+<meta name="twitter:description" content="프로그래밍을 하면서 스택 영역, 힙 영역이라는 말을 많이 들어봤을 것이다.스택이나 힙은 한 프로세스 내에 존재하는 메모리 영역인데, 이 스택과 힙 메모리 공간을 얼마나 할당할 수 있는지 알아보고자 한다. 위 그림은 번지에 따른 메모리 구조이다. 즉, 위에 있을 수록 주소가 높고(High Address) 밑에 있을 수록 주소가 낮다(Low Address).크게 코드 영역, 데이터 영역으로 나뉘고, 작게는 데이터 영역 내에서 힙, 스택으로 나뉜다. 하지만 처음부터 모든 메모리 공간을 사용하지는 않는다. 보통 힙과 스택 사이가 비어있는데, 이는 미사용 공간으로 처음부터 힙과 스택이 할당되어 있는게 아니라는 의미이다. 이들은 메모리 공간이 필요할 때 할당이 된다. 스택이라면 함수가 호출될 때, 힙이라면 동적으로.."/>
+<meta property="twitter:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F255DDA43576046DD11"/>
+<meta content="https://bozeury.tistory.com/90" property="dg:plink" content="https://bozeury.tistory.com/90"/>
+<meta name="plink"/>
+<meta name="title" content="힙(Heap)과 스택(Stack)의 최대 할당 크기"/>
+<meta name="article:media_name" content="따..딱히 공부하려고 포스팅하는 건 아니니까..!"/>
+<meta property="article:mobile_url" content="https://bozeury.tistory.com/m/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0"/>
+<meta property="article:pc_url" content="https://bozeury.tistory.com/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0"/>
+<meta property="article:mobile_view_url" content="https://bozeury.tistory.com/m/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0"/>
+<meta property="article:pc_view_url" content="https://bozeury.tistory.com/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0"/>
+<meta property="article:talk_channel_view_url" content="https://bozeury.tistory.com/m/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0"/>
+<meta property="article:pc_service_home" content="https://www.tistory.com"/>
+<meta property="article:mobile_service_home" content="https://www.tistory.com/m"/>
+<meta property="article:txid" content="1779262_90"/>
+<meta property="article:published_time" content="2016-06-15T03:23:04+09:00"/>
+<meta property="og:regDate" content="20160615032304"/>
+<meta property="article:modified_time" content="2016-06-19T20:34:22+09:00"/>
+<link rel="icon" sizes="any" href="https://t1.daumcdn.net/tistory_admin/favicon/tistory_favicon_32x32.ico"/>
+<link rel="icon" type="image/svg+xml" href="https://t1.daumcdn.net/tistory_admin/top_v2/bi-tistory-favicon.svg"/>
+<link rel="apple-touch-icon" href="https://t1.daumcdn.net/tistory_admin/top_v2/tistory-apple-touch-favicon.png"/>
+<link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/lib/lightbox/css/lightbox.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/style/font.css"/>
+<link rel="stylesheet" type="text/css" href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/style/content.css"/>
+<link rel="stylesheet" type="text/css" href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/style/uselessPMargin.css"/>
+<script type="text/javascript">(function() {
+    var tjQuery = jQuery.noConflict(true);
+    window.tjQuery = tjQuery;
+    window.orgjQuery = window.jQuery; window.jQuery = tjQuery;
+    window.jQuery = window.orgjQuery; delete window.orgjQuery;
+})()</script>
+<script type="text/javascript" src="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/script/base.js"></script>
+<script type="text/javascript" src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+                
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>힙(Heap)과 스택(Stack)의 최대 할당 크기</title>
+	<link rel="alternate" type="application/rss+xml" title="따..딱히 공부하려고 포스팅하는 건 아니니까..!" href="https://bozeury.tistory.com/rss" />
+
+	<link rel="stylesheet" href="https://tistory1.daumcdn.net/tistory/1779262/skin/style.css?_version_=1493823601">
+	<link rel="stylesheet" href="https://tistory1.daumcdn.net/tistory/1779262/skin/images/font.css?_version_=1493823601">
+
+	<!--[if lt IE 9]>
+    <script src="//t1.daumcdn.net/tistory_admin/lib/jquery-1.11.3.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="//t1.daumcdn.net/tistory_admin/lib/jquery-2.1.4.min.js"></script>
+	<!--<![endif]-->
+
+                
+                
+                <style type="text/css">.another_category {
+    border: 1px solid #E5E5E5;
+    padding: 10px 10px 5px;
+    margin: 10px 0;
+    clear: both;
+}
+
+.another_category h4 {
+    font-size: 12px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+    padding: 2px 0 6px !important;
+}
+
+.another_category h4 a {
+    font-weight: bold !important;
+}
+
+.another_category table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100% !important;
+    margin-top: 10px !important;
+}
+
+* html .another_category table {
+    width: auto !important;
+}
+
+*:first-child + html .another_category table {
+    width: auto !important;
+}
+
+.another_category th, .another_category td {
+    padding: 0 0 4px !important;
+}
+
+.another_category th {
+    text-align: left;
+    font-size: 12px !important;
+    font-weight: normal;
+    word-break: break-all;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.another_category td {
+    text-align: right;
+    width: 80px;
+    font-size: 11px;
+}
+
+.another_category th a {
+    font-weight: normal;
+    text-decoration: none;
+    border: none !important;
+}
+
+.another_category th a.current {
+    font-weight: bold;
+    text-decoration: none !important;
+    border-bottom: 1px solid !important;
+}
+
+.another_category th span {
+    font-weight: normal;
+    text-decoration: none;
+    font: 10px Tahoma, Sans-serif;
+    border: none !important;
+}
+
+.another_category_color_gray, .another_category_color_gray h4 {
+    border-color: #E5E5E5 !important;
+}
+
+.another_category_color_gray * {
+    color: #909090 !important;
+}
+
+.another_category_color_gray th a.current {
+    border-color: #909090 !important;
+}
+
+.another_category_color_gray h4, .another_category_color_gray h4 a {
+    color: #737373 !important;
+}
+
+.another_category_color_red, .another_category_color_red h4 {
+    border-color: #F6D4D3 !important;
+}
+
+.another_category_color_red * {
+    color: #E86869 !important;
+}
+
+.another_category_color_red th a.current {
+    border-color: #E86869 !important;
+}
+
+.another_category_color_red h4, .another_category_color_red h4 a {
+    color: #ED0908 !important;
+}
+
+.another_category_color_green, .another_category_color_green h4 {
+    border-color: #CCE7C8 !important;
+}
+
+.another_category_color_green * {
+    color: #64C05B !important;
+}
+
+.another_category_color_green th a.current {
+    border-color: #64C05B !important;
+}
+
+.another_category_color_green h4, .another_category_color_green h4 a {
+    color: #3EA731 !important;
+}
+
+.another_category_color_blue, .another_category_color_blue h4 {
+    border-color: #C8DAF2 !important;
+}
+
+.another_category_color_blue * {
+    color: #477FD6 !important;
+}
+
+.another_category_color_blue th a.current {
+    border-color: #477FD6 !important;
+}
+
+.another_category_color_blue h4, .another_category_color_blue h4 a {
+    color: #1960CA !important;
+}
+
+.another_category_color_violet, .another_category_color_violet h4 {
+    border-color: #E1CEEC !important;
+}
+
+.another_category_color_violet * {
+    color: #9D64C5 !important;
+}
+
+.another_category_color_violet th a.current {
+    border-color: #9D64C5 !important;
+}
+
+.another_category_color_violet h4, .another_category_color_violet h4 a {
+    color: #7E2CB5 !important;
+}
+</style>
+
+                
+                <link rel="stylesheet" type="text/css" href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/style/dialog.css"/>
+<link rel="stylesheet" type="text/css" href="//t1.daumcdn.net/tistory_admin/www/style/top/font.css"/>
+<link rel="stylesheet" type="text/css" href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/style/postBtn.css"/>
+<link rel="stylesheet" type="text/css" href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/style/comment.css"/>
+<link rel="stylesheet" type="text/css" href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/style/tistory.css"/>
+<link rel="stylesheet" type="text/css" href="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/style/revenue.css"/>
+<link rel="canonical" href="https://bozeury.tistory.com/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0"/>
+
+<!-- BEGIN STRUCTURED_DATA -->
+<script type="application/ld+json">
+    {"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@id":"https://bozeury.tistory.com/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0","name":null},"url":"https://bozeury.tistory.com/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0","headline":"힙(Heap)과 스택(Stack)의 최대 할당 크기","description":"프로그래밍을 하면서 스택 영역, 힙 영역이라는 말을 많이 들어봤을 것이다.스택이나 힙은 한 프로세스 내에 존재하는 메모리 영역인데, 이 스택과 힙 메모리 공간을 얼마나 할당할 수 있는지 알아보고자 한다. 위 그림은 번지에 따른 메모리 구조이다. 즉, 위에 있을 수록 주소가 높고(High Address) 밑에 있을 수록 주소가 낮다(Low Address).크게 코드 영역, 데이터 영역으로 나뉘고, 작게는 데이터 영역 내에서 힙, 스택으로 나뉜다. 하지만 처음부터 모든 메모리 공간을 사용하지는 않는다. 보통 힙과 스택 사이가 비어있는데, 이는 미사용 공간으로 처음부터 힙과 스택이 할당되어 있는게 아니라는 의미이다. 이들은 메모리 공간이 필요할 때 할당이 된다. 스택이라면 함수가 호출될 때, 힙이라면 동적으로..","author":{"@type":"Person","name":"보즈리","logo":null},"image":{"@type":"ImageObject","url":"https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F255DDA43576046DD11","width":"800px","height":"800px"},"datePublished":"20160615T03:23:04","dateModified":"20160619T20:34:22","publisher":{"@type":"Organization","name":"TISTORY","logo":{"@type":"ImageObject","url":"https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png","width":"800px","height":"800px"}}}
+</script>
+<!-- END STRUCTURED_DATA -->
+<script type="text/javascript" src="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/script/common.js"></script>
+<script type="text/javascript" src="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/script/comment.js" defer=""></script>
+
+                
+                </head>
+
+                                                <body id="tt-body-page">
+                
+                
+                
+
+
+<div id="dkIndex">
+    <!--웹접근성용 바로가기 링크 모음-->
+    <a href="#dkBody">본문 바로가기</a>
+</div>
+<div id="dkWrap" class="wrap_skin">
+    <!-- 카테고리버튼 클릭시 'navi_on' 클래스 부여 -->
+    <div id="dkHead" role="banner" class="area_head">
+        <h1 class="screen_out">따..딱히 공부하려고 포스팅하는 건 아니니까..!</h1>
+        <button type="button" class="btn_cate">
+            <span class="ico_skin ico_cate">카테고리</span>
+        </button>
+        <div class="area_search ">
+            <button type="button" class="btn_search">
+                <span class="ico_skin ico_search">검색하기</span>
+            </button>
+			
+	            <form action="#" method="get" class="frm_search box_search" onsubmit="try {
+    window.location.href = '/search' + '/' + looseURIEncode(document.getElementsByName('search')[0].value);
+    document.getElementsByName('search')[0].value = '';
+    return false;
+} catch (e) {}">
+	                <fieldset>
+	                    <legend class="screen_out">검색하기</legend>
+	                    <label for="search" class="lab_search screen_out">Search</label>
+	                    <input type="text" name="search" id="search" class="tf_search" placeholder="Search" value="" data-value="">
+	                    <span class="ico_skin ico_search"></span>
+	                </fieldset>
+	            </form>
+			
+        </div>
+        <div class="area_profile">
+            <div class="tit_post">
+                <a href="/" class="link_post">따..딱히 공부하려고 포스팅하는 건 아니니까..!</a>
+            </div>
+            <span class="thumb_profile">
+                <img src="https://t1.daumcdn.net/cfile/tistory/2231794455D436890D" class="img_profile" alt="프로필사진">
+            </span>
+            <span class="txt_profile">보즈리</span>
+        </div>
+    </div>
+    <hr class="hide">
+    <div id="dkContent" class="cont_skin" role="main">
+        <div id="cMain">
+            <div id="mFeature" class="wrap_sub">
+                <div class="cont_sub">
+                    <div class="inner_sub">
+                        <div class="area_sub">
+                            <div role="navigation" class="area_navi">
+                                <ul class="tt_category"><li class=""><a href="/category" class="link_tit"> 전체보기 <span class="c_cnt">(70)</span> </a>
+  <ul class="category_list"><li class=""><a href="/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D" class="link_item"> 프로그래밍 <span class="c_cnt">(15)</span> </a></li>
+<li class=""><a href="/category/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4" class="link_item"> 데이터베이스 <span class="c_cnt">(3)</span> </a></li>
+<li class=""><a href="/category/C/C%2B%2B" class="link_item"> C/C++ <span class="c_cnt">(15)</span> </a></li>
+<li class=""><a href="/category/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%7C%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" class="link_item"> 자료구조|알고리즘 <span class="c_cnt">(8)</span> </a></li>
+<li class=""><a href="/category/%EC%8B%9C%EC%8A%A4%ED%85%9C%7C%EC%84%9C%EB%B2%84%7C%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" class="link_item"> 시스템|서버|네트워크 <span class="c_cnt">(17)</span> </a></li>
+<li class=""><a href="/category/%EA%B7%B8%EB%9E%98%ED%94%BD%EC%8A%A4" class="link_item"> 그래픽스 <span class="c_cnt">(8)</span> </a></li>
+<li class=""><a href="/category/%EB%AA%A8%EB%B0%94%EC%9D%BC" class="link_item"> 모바일 <span class="c_cnt">(3)</span> </a></li>
+<li class=""><a href="/category/%EB%A7%8C%ED%99%94%7C%EC%95%A0%EB%8B%88%7C%EA%B2%8C%EC%9E%84" class="link_item"> 만화|애니|게임 <span class="c_cnt">(1)</span> </a></li>
+<li class=""><a href="/category/%EB%82%99%EC%84%9C%EC%9E%A5" class="link_item"> 낙서장 <span class="c_cnt">(0)</span> </a></li>
+</ul>
+</li>
+</ul>
+
+								<a href="https://bozeury.tistory.com/guestbook" class="link_guestbook">Guestbook</a>
+                            </div>
+                            <div class="wrap_etc">
+                                <div class="col_aside left_side">
+                                
+                                        <!-- 공지사항 -->
+										
+		                                    <div class="box_aside">
+		                                        <strong class="tit_aside">Notice</strong>
+		                                        <ul class="list_board">
+		                                            
+		                                        </ul>
+		                                    </div>
+										
+                                    
+                                        <!-- 최근에 올라온 글 -->
+                                    <div class="box_aside">
+                                        <strong class="tit_aside">Recent Posts</strong>
+                                        <ul class="list_board">
+                                            
+                                            <li><a href="/entry/%EC%93%B0%EB%A0%88%EB%93%9CThread" class="link_board">쓰레드(Thread)</a></li>
+                                            
+                                            <li><a href="/entry/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4Process-1" class="link_board">프로세스(Process)</a></li>
+                                            
+                                            <li><a href="/entry/%EB%B2%84%ED%8D%BCBuffer" class="link_board">버퍼(Buffer)</a></li>
+                                            
+                                            <li><a href="/entry/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C" class="link_board">운영체제(OS, Operating System)</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    
+                                        <!-- 최근에 달린 댓글 -->
+                                    <div class="box_aside">
+                                        <strong class="tit_aside">Recent Comments</strong>
+                                        <ul class="list_board">
+                                            
+											<li><a href="/96#comment13091696" class="link_board">네 맞습니다 제가 빼먹었네요</a></li>
+    										
+											<li><a href="/96#comment12483115" class="link_board">int FactorialTail(int n)
+
+{
+
+i⋯</a></li>
+    										
+											<li><a href="/90#comment11590017" class="link_board">잘 읽었습니다!</a></li>
+    										
+											<li><a href="/96#comment11184210" class="link_board">반가와요</a></li>
+    										
+                                        </ul>
+                                    </div>
+                                    
+                                        <!-- 링크 -->
+                                    <div class="box_aside">
+                                        <strong class="tit_aside">Link</strong>
+                                        <ul class="list_board">
+                                            
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+
+
+                                <div class="col_aside right_side">
+                                
+                                        <!-- 달력 -->
+                                    <div class="box_aside box_calendar">
+                                        <table class="tt-calendar" cellpadding="0" cellspacing="1" style="width: 100%; table-layout: fixed">
+  <caption class="cal_month"><a href="/archive/202309" title="1개월 앞의 달력을 보여줍니다.">«</a> &nbsp; <a href="/archive/202310" title="현재 달의 달력을 보여줍니다.">2023/10</a> &nbsp; <a href="/archive/202311" title="1개월 뒤의 달력을 보여줍니다.">»</a></caption>
+  <thead>
+    <tr>
+      <th class="cal_week2">일</th>
+      <th class="cal_week1">월</th>
+      <th class="cal_week1">화</th>
+      <th class="cal_week1">수</th>
+      <th class="cal_week1">목</th>
+      <th class="cal_week1">금</th>
+      <th class="cal_week1">토</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="cal_week cal_current_week">
+      <td class="cal_day cal_day3 cal_day_sunday">1</td>
+      <td class="cal_day cal_day3">2</td>
+      <td class="cal_day cal_day3">3</td>
+      <td class="cal_day cal_day3">4</td>
+      <td class="cal_day cal_day3">5</td>
+      <td class="cal_day cal_day3">6</td>
+      <td class="cal_day cal_day3">7</td>
+    </tr>
+    <tr class="cal_week">
+      <td class="cal_day cal_day3 cal_day_sunday">8</td>
+      <td class="cal_day cal_day3">9</td>
+      <td class="cal_day cal_day3">10</td>
+      <td class="cal_day cal_day3">11</td>
+      <td class="cal_day cal_day3">12</td>
+      <td class="cal_day cal_day3">13</td>
+      <td class="cal_day cal_day3">14</td>
+    </tr>
+    <tr class="cal_week">
+      <td class="cal_day cal_day3 cal_day_sunday">15</td>
+      <td class="cal_day cal_day3">16</td>
+      <td class="cal_day cal_day3">17</td>
+      <td class="cal_day cal_day3">18</td>
+      <td class="cal_day cal_day3">19</td>
+      <td class="cal_day cal_day3">20</td>
+      <td class="cal_day cal_day3">21</td>
+    </tr>
+    <tr class="cal_week">
+      <td class="cal_day cal_day3 cal_day_sunday">22</td>
+      <td class="cal_day cal_day3">23</td>
+      <td class="cal_day cal_day3">24</td>
+      <td class="cal_day cal_day3">25</td>
+      <td class="cal_day cal_day3">26</td>
+      <td class="cal_day cal_day4">27</td>
+      <td class="cal_day cal_day3">28</td>
+    </tr>
+    <tr class="cal_week">
+      <td class="cal_day cal_day3 cal_day_sunday">29</td>
+      <td class="cal_day cal_day3">30</td>
+      <td class="cal_day cal_day3">31</td>
+      <td class="cal_day1 cal_day2"> </td>
+      <td class="cal_day1 cal_day2"> </td>
+      <td class="cal_day1 cal_day2"> </td>
+      <td class="cal_day1 cal_day2"> </td>
+    </tr>
+  </tbody>
+</table>
+                                    </div>
+                                    
+                                        <!-- 태그 클라우드 -->
+                                    <div class="box_aside box_tag">
+                                        <strong class="tit_aside">Tags</strong>
+                                        <ul class="list_tag">
+                                            
+                                        </ul>
+                                        <a href="https://bozeury.tistory.com/tag" class="link_more">more</a>
+                                    </div>
+                                    
+                                        <!-- 글 보관함 -->
+                                    <div class="box_aside box_archive">
+                                        <strong class="tit_aside">Archives</strong>
+                                        <ul class="list_keep">
+                                            
+                                            <li><a href="/archive/201705" class="link_keep">2017/05</a> (4)</li>
+                                            
+                                            <li><a href="/archive/201701" class="link_keep">2017/01</a> (1)</li>
+                                            
+                                            <li><a href="/archive/201607" class="link_keep">2016/07</a> (2)</li>
+                                            
+                                            <li><a href="/archive/201606" class="link_keep">2016/06</a> (9)</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    
+                                        <!-- 방문자수 -->
+                                    <div class="box_aside box_visitor">
+                                        <dl class="list_visitor">
+                                            <dt>Today</dt>
+                                            <dd>15</dd>
+                                        </dl>
+                                        <dl class="list_total">
+                                            <dt>Total</dt>
+                                            <dd>173,271</dd>
+                                        </dl>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="ico_skin btn_close">닫기</button>
+
+                    <strong class="screen_out">관리 메뉴</strong>
+                    <ul class="list_control">
+                        <li><a href="https://bozeury.tistory.com/manage/entry/post" class="ico_skin link_write" title="글쓰기">글쓰기</a></li>
+                        <li><a href="https://bozeury.tistory.com/guestbook" class="ico_skin link_memo" title="방명록">방명록</a></li>
+                        <li><a href="https://bozeury.tistory.com/rss" class="ico_skin link_rss" title="RSS">RSS</a></li>
+                        <li><a href="https://bozeury.tistory.com/manage" class="ico_skin link_manage" title="관리">관리</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mArticle" class="article_skin">
+
+				
+
+				<div class="index_title">
+					<h2 class="tit_skin"><span class="txt_title">따..딱히 공부하려고 포스팅하는 건 아니니까..!</span></h2>
+				</div>
+
+                            
+                
+	
+
+
+                
+                    <h2 id="dkBody" class="screen_out">힙(Heap)과 스택(Stack)의 최대 할당 크기 본문</h2>
+                    <div class="area_title">
+                        <strong class="tit_category"><a href="/category/%EC%8B%9C%EC%8A%A4%ED%85%9C%7C%EC%84%9C%EB%B2%84%7C%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC">시스템|서버|네트워크</a></strong>
+                        <h3 class="tit_post">힙(Heap)과 스택(Stack)의 최대 할당 크기</h3>
+                        <span class="info_post">보즈리
+                            <span class="txt_bar"></span>2016. 6. 15. 03:23
+				
+			</span>
+                    </div>
+
+                    <div class="area_view">
+                                    <!-- System - START -->
+
+<!-- System - END -->
+
+            <div class="tt_article_useless_p_margin contents_style"><p>프로그래밍을 하면서 스택 영역, 힙 영역이라는 말을 많이 들어봤을 것이다.</p><p>스택이나 힙은 한 프로세스 내에 존재하는 메모리 영역인데,&nbsp;이 스택과 힙 메모리 공간을 얼마나 할당할 수 있는지 알아보고자 한다.</p><p><br /></p><p><br /></p><p style="text-align: center;"><img src="https://t1.daumcdn.net/cfile/tistory/26631F4F53AADA0A2C"></p><p style="text-align: center;"><br /></p><p style="text-align: center;">&lt;프로세스 내 메모리 영역&gt;</p><p style="text-align: center;"><br /></p><p style="text-align: left;">위 그림은 번지에 따른 메모리 구조이다. 즉, 위에 있을 수록 주소가 높고(High Address) 밑에 있을 수록 주소가 낮다(Low Address).</p><p style="text-align: left;">크게 코드 영역, 데이터 영역으로 나뉘고, 작게는 데이터 영역 내에서 힙, 스택으로 나뉜다.</p><p style="text-align: left;"><br /></p><p style="text-align: left;">하지만 처음부터 모든 메모리 공간을 사용하지는 않는다. 보통&nbsp;힙과 스택 사이가 비어있는데,&nbsp;이는 미사용 공간으로&nbsp;처음부터 힙과 스택이 할당되어 있는게 아니라는 의미이다. 이들은 메모리 공간이 필요할 때 할당이 된다. 스택이라면 함수가 호출될 때, 힙이라면 동적으로 할당했을 때 할당된다.</p><p style="text-align: left;"><br /></p><p style="text-align: left;">그렇다면 힙과 스택은 최대 얼마까지 할당할 수 있을까?</p><p>우리가 주로 사용하는 힙과 스택은 기본적으로 <b>사용자 지정에 의해 최대 크기를 정할 수 있다.</b></p><p>하드웨어는 유한하다. 그러므로 힙과 스택을 최대로 할당할 수 있는 크기도 유한하다.</p><p>결론만 말하자면(<u>OS에 따라 다르겠지만 윈도우 기준에서</u>) 한 프로세스 내에서&nbsp;<b>스택과&nbsp;힙은 윈도우에서 설정한 램&nbsp;메모리만큼 </b>최대로 할당할 수 있다.</p><p><br /></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display: inline-block; width: 636px;  height: auto; max-width: 100%;"><img src="https://t1.daumcdn.net/cfile/tistory/256A85365766828307" style="" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F256A85365766828307" width="636" height="485" filename="램메모리.jpg" filemime="image/jpeg"/></span></p><p style="text-align: center; clear: none; float: none;"><br /></p><p style="text-align: center; clear: none; float: none;">&lt;현재 램은&nbsp;약 2기가 정도 남았다&gt;</p><p style="text-align: center; clear: none; float: none;"><br /></p><p><br /></p><p>이를 확인해보기 위해 비주얼 스튜디오로 시험해봤다.</p><p><br /></p><p>보통 비주얼 스튜디오에서는 디폴트 값으로 스택의 최대크기를 1MB로&nbsp;지정한다.</p><p><br /></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display: inline-block; width: 752px;  height: auto; max-width: 100%;"><img src="https://t1.daumcdn.net/cfile/tistory/2431EA3D576047D019" style="max-width: 100%; height: auto;" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2431EA3D576047D019" width="752" height="411" filename="스택 크기지정.PNG" filemime="image/jpeg"/></span></p><p><br /></p><p><br /></p><p>이때, 정말 1MB정도 밖에 할당이 되지 않는지 한번 확인해봤다.</p><p><br /></p><p>char 형은 1byte이다.&nbsp;char[1000000]은 1000000byte&nbsp;즉, 약 1MB정도 된다.</p><p>그렇다면 1MB 이상을 할당한다면 어떻게 될까?</p><p><br /></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display: inline-block; width: 574px;  height: auto; max-width: 100%;"><img src="https://t1.daumcdn.net/cfile/tistory/255DDA43576046DD11" style="max-width: 100%; height: auto;" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F255DDA43576046DD11" width="574" height="200" filename="스택.PNG" filemime="image/jpeg"/></span></p><p><br /></p><p>보다시피 char를 천만개 선언했더니&nbsp;윈도우에서 프로그램을 강제 종료 시킨다.<br /></p><p><br /></p><p style="text-align: center;"><span class="imageblock" style="display: inline-block; width: 465px; text-align: center;; height: auto; max-width: 100%;"><img src="https://t1.daumcdn.net/cfile/tistory/224D2046576049730A" style="text-align: center;" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F224D2046576049730A" width="465" height="33" filename="200메가.PNG" filemime="image/jpeg"/></span><span class="imageblock" style="display: inline-block; width: 607px; text-align: center;; height: auto; max-width: 100%;"><img src="https://t1.daumcdn.net/cfile/tistory/254D5E46576049730A" style="text-align: center;" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F254D5E46576049730A" width="607" height="138" filename="200메가잘됨.PNG" filemime="image/jpeg"/></span></p><p><br /></p><p>약&nbsp;200MB를 설정해보고 할당했더니 잘된다.</p><p><br /></p><p>현재 PC의 램 크기는 2GB정도 남아있었다.</p><p>그렇다면 스택의 최대 크기를 2GB로 설정하고 그 이상을 할당하면 어떻게 될까?</p><p><br /></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display: inline-block; width: 752px;  height: auto; max-width: 100%;"><img src="https://t1.daumcdn.net/cfile/tistory/274D3C46576049720A" style="max-width: 100%; height: auto;" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F274D3C46576049720A" width="752" height="411" filename="2기가.PNG" filemime="image/jpeg"/></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display: inline-block; width: 714px;  height: auto; max-width: 100%;"><img src="https://t1.daumcdn.net/cfile/tistory/244D4F465760497309" style="max-width: 100%; height: auto;" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F244D4F465760497309" width="714" height="129" filename="2기가부족.PNG" filemime="image/jpeg"/></span></p><p><br /></p><p>메모리 공간이 부족하여 명령을 처리할 수 없다고 한다. (char를 2GB 이하로 선언해도 같은 메시지를 볼 수 있다.)</p><p><b><br /></b></p><p><b>즉, 스택은 남은 램의 크기 만큼 할당할 수 있다.</b></p><p><b>힙 또한 마찬가지로 램의 크기만큼 할당할 수 있다.</b></p><p><b><br /></b></p><p><b>(Tip.&nbsp;만약 이 램을 다 사용한다면 가상메모리를 사용할 것이다.)</b></p></div>
+            <!-- System - START -->
+
+<!-- System - END -->
+
+                    <div class="container_postbtn #post_button_group">
+  <div class="postbtn_like"><script>window.ReactionButtonType = 'reaction';
+window.ReactionApiUrl = '//bozeury.tistory.com/reaction';
+window.ReactionReqBody = {
+    entryId: 90
+}</script>
+<div class="wrap_btn" id="reaction-90"></div>
+<script src="https://tistory1.daumcdn.net/tistory_admin/userblog/userblog-9fe828f0ab538e226316ca5997f14f38a5d2a559/static/script/reaction-button-container.min.js"></script><div class="wrap_btn wrap_btn_share"><button type="button" class="btn_post sns_btn btn_share" aria-expanded="false" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F255DDA43576046DD11" data-title="힙(Heap)과 스택(Stack)의 최대 할당 크기" data-description="프로그래밍을 하면서 스택 영역, 힙 영역이라는 말을 많이 들어봤을 것이다.스택이나 힙은 한 프로세스 내에 존재하는 메모리 영역인데, 이 스택과 힙 메모리 공간을 얼마나 할당할 수 있는지 알아보고자 한다. 위 그림은 번지에 따른 메모리 구조이다. 즉, 위에 있을 수록 주소가 높고(High Address) 밑에 있을 수록 주소가 낮다(Low Address).크게 코드 영역, 데이터 영역으로 나뉘고, 작게는 데이터 영역 내에서 힙, 스택으로 나뉜다. 하지만 처음부터 모든 메모리 공간을 사용하지는 않는다. 보통 힙과 스택 사이가 비어있는데, 이는 미사용 공간으로 처음부터 힙과 스택이 할당되어 있는게 아니라는 의미이다. 이들은 메모리 공간이 필요할 때 할당이 된다. 스택이라면 함수가 호출될 때, 힙이라면 동적으로.." data-profile-image="https://t1.daumcdn.net/cfile/tistory/2231794455D436890D" data-profile-name="보즈리" data-pc-url="https://bozeury.tistory.com/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0" data-relative-pc-url="/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0" data-blog-title="따..딱히 공부하려고 포스팅하는 건 아니니까..!"><span class="ico_postbtn ico_share">공유하기</span></button>
+  <div class="layer_post" id="tistorySnsLayer"></div>
+</div><div class="wrap_btn wrap_btn_etc" data-entry-id="90" data-entry-visibility="public" data-category-visibility="public"><button type="button" class="btn_post btn_etc2" aria-expanded="false"><span class="ico_postbtn ico_etc">게시글 관리</span></button>
+  <div class="layer_post" id="tistoryEtcLayer"></div>
+</div></div>
+<button type="button" class="btn_menu_toolbar btn_subscription  #subscribe" data-blog-id="1779262" data-url="https://bozeury.tistory.com/entry/%ED%9E%99Heap%EA%B3%BC-%EC%8A%A4%ED%83%9DStack%EC%9D%98-%EC%B5%9C%EB%8C%80-%ED%81%AC%EA%B8%B0" data-device="web_pc"><em class="txt_state">구독하기</em><strong class="txt_tool_id">따..딱히 공부하려고 포스팅하는 건 아니니까..!</strong><span class="img_common_tistory ico_check_type1"></span></button><div class="postbtn_ccl" data-ccl-type="2" data-ccl-derive="1">
+    <a href="https://creativecommons.org/licenses/by/4.0/deed.ko" target="_blank" class="link_ccl" rel="license">
+        <span class="bundle_ccl">
+            <span class="ico_postbtn ico_ccl1">저작자표시</span> 
+        </span>
+    </a>
+</div>
+<!--
+<rdf:RDF xmlns="https://web.resource.org/cc/" xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Work rdf:about="">
+        <license rdf:resource="https://creativecommons.org/licenses/by/4.0/deed.ko" />
+    </Work>
+    <License rdf:about="https://creativecommons.org/licenses/by/4.0/deed.ko">
+        <permits rdf:resource="https://web.resource.org/cc/Reproduction"/>
+        <permits rdf:resource="https://web.resource.org/cc/Distribution"/>
+        <requires rdf:resource="https://web.resource.org/cc/Notice"/>
+        <requires rdf:resource="https://web.resource.org/cc/Attribution"/>
+        <permits rdf:resource="https://web.resource.org/cc/DerivativeWorks"/>
+
+    </License>
+</rdf:RDF>
+-->  <div data-tistory-react-app="SupportButton"></div>
+</div>
+
+                    <!-- PostListinCategory - START -->
+<div class="another_category another_category_color_gray">
+  <h4>'<a href="/category/%EC%8B%9C%EC%8A%A4%ED%85%9C%7C%EC%84%9C%EB%B2%84%7C%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC">시스템|서버|네트워크</a>' 카테고리의 다른 글</h4>
+  <table>
+    <tr>
+      <th><a href="/entry/%EB%A7%81%ED%81%AC-%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%ACVirtual-Memory">(링크) 가상 메모리(Virtual Memory)</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2016.06.15</td>
+    </tr>
+    <tr>
+      <th><a href="/entry/%EC%93%B0%EB%A0%88%EB%93%9C%EB%8A%94-%EC%B5%9C%EB%8C%80-%EB%AA%87%EA%B0%9C%EA%B9%8C%EC%A7%80-%EC%83%9D%EC%84%B1%ED%95%A0-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C">쓰레드는 최대 몇개까지 생성할 수 있을까?</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2016.06.15</td>
+    </tr>
+    <tr>
+      <th><a href="/entry/%EB%A6%AC%EB%88%85%EC%8A%A4%EC%89%98Shell">[리눅스]쉘(Shell)</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2016.04.07</td>
+    </tr>
+    <tr>
+      <th><a href="/entry/%EB%A6%AC%EB%88%85%EC%8A%A4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%8B%A4%ED%96%89%EA%B3%BC-%EC%A2%85%EB%A3%8C">[리눅스]프로그램 실행과 종료</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2016.04.07</td>
+    </tr>
+    <tr>
+      <th><a href="/entry/%EC%93%B0%EB%A0%88%EB%93%9C">쓰레드</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2016.03.21</td>
+    </tr>
+  </table>
+</div>
+
+<!-- PostListinCategory - END -->
+
+                    </div>
+                    <div class="area_etc">
+                        
+
+                        <strong class="screen_out">공유하기 링크</strong>
+                        <ul class="list_share">
+                            <li><a href="#none" class="ico_skin link_fb" data-service="facebook">페이스북</a></li>
+                            <li><a href="#none" class="ico_skin link_ks" data-service="kakaostory">카카오스토리</a></li>
+                            <li><a href="#none" class="ico_skin link_tw" data-service="twitter">트위터</a></li>
+                        </ul>
+                    </div>
+
+		
+			<div class="area_related">
+				<strong class="tit_related">'시스템|서버|네트워크' Related Articles</strong>
+				<ul class="list_related">
+					
+						<li class="text_type">
+							<a href="/entry/%EB%A7%81%ED%81%AC-%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%ACVirtual-Memory?category=809153" class="link_related">
+								
+								<span class="txt_related">(링크) 가상 메모리(Virtual Memory)</span>
+								<span class="date_related">2016.06.15</span>
+								<span class="frame_related"></span>
+							</a>
+						</li>
+					
+						<li class="thumb_type">
+							<a href="/entry/%EC%93%B0%EB%A0%88%EB%93%9C%EB%8A%94-%EC%B5%9C%EB%8C%80-%EB%AA%87%EA%B0%9C%EA%B9%8C%EC%A7%80-%EC%83%9D%EC%84%B1%ED%95%A0-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C?category=809153" class="link_related">
+								
+									<span class="thumb_related">
+										<img src="//i1.daumcdn.net/thumb/C185x200/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F216BA3355766841C33" class="img_related" alt="">
+									</span>
+								
+								<span class="txt_related">쓰레드는 최대 몇개까지 생성할 수 있을까?</span>
+								<span class="date_related">2016.06.15</span>
+								<span class="frame_related"></span>
+							</a>
+						</li>
+					
+						<li class="text_type">
+							<a href="/entry/%EB%A6%AC%EB%88%85%EC%8A%A4%EC%89%98Shel
