@@ -1,0 +1,22 @@
+class Animal {
+}
+껍대기인 클래스의 중요한 기능이 있다. 바로 객체를 만드는 기능이다.
+다음과 같이 객체를 만들 수 있다.
+Animal cat = new Animal()
+Animal dog = new Animal()
+
+new 는 객체를 생성할 때 사용하는 키워드이다.
+
+껍데기 클래스에 객체 변수를 만들면 공통적으로 사용할 수 있다.
+Animal 클래스에 String name; 의 필드를 만들어주면 dog, cat에서도 사용할 수 있따.
+// 객체 변수는 인스턴스 변수, 멤버 변수, 속성이라고도 한다.
+
+Animal cat = new Animal() 처럼 cat 이라는 객체를 생성했다면 이 cat 객체의 객체 변수 name 에 접근할 수 있다.
+cat.name;  // 객체 cat , 객체변수 name
+
+메서드
+public void setName(String name) {
+   this.name = name;
+}
+위의 메서드 접근도 cat.setName("body") 으로 호출할 수 있다.
+위 코드는 body의 매개값을 name 변수에 넣어준다.
