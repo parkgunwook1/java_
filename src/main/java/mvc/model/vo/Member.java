@@ -4,6 +4,15 @@ import java.util.Date;
 
 public class Member {
 
+    /*
+    * vo : DB테이블의 한 행에 대한 데이터를 기록하기위한 저장용 객체
+    *
+    * vo 조건
+    * 1) 반드시 캡슐화 적용
+    * 2) 기본생성자 및 매개변수 생성자를 작성해야한다.
+    * 3) 모든 필드에 대해 getter 메소드를 작성해야한다.(setter는 필수 아님)
+    * */
+
     private int userNo;
     private String userId;
     private int userPwd;
@@ -18,6 +27,7 @@ public class Member {
 
     //	클래스 내부에 빌더라는 이름의 클래스 생성(이너클래스)
     /*
+        빌더패턴 생성 방식 : 생성자 패턴, setter함수 이용한 객체생성 단점을 보완하는 새로운 디자인 패턴이다.
      * 빌더를 이용시 장점
      * 1. 불필요한 생성자 제거
      * 2. 데이터의 순서외 상관없이 객체 생성이 가능하다
@@ -163,5 +173,49 @@ public class Member {
 
     public Date getEnrollDate() {
         return enrollDate;
+    }
+
+    public void setUserNo(int userNo) {
+        this.userNo = userNo;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setUserPwd(int userPwd) {
+        this.userPwd = userPwd;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
+
+    public void setEnrollDate(Date enrollDate) {
+        this.enrollDate = enrollDate;
     }
 }

@@ -1,0 +1,32 @@
+MyBatis
+데이터의 입력, 조회, 수정, 삭제(CRUD)를 보다 편하게 하기 위해 XML로 구조화한 Mapper 설정파일을 통해 JDBC를 구현한 영속성 프레임워크 기존 JDBC를 통해 구현했던 상당 부분의 코드와 파라미터 설정 및 결과 매핑을 XML 설정을 통해 쉽게 구현할 수 있게 해준다.
+
+JDBC Tempplate을 통해 sql을 실행했다면, MyBatis는 해당 흐름을 전용 라이브러리를 통해 대체하여 동작한다.
+
+mybatis-config.xml 생성위치 => 'resources'라는 폴더를 생성하고 파일 등록한다.
+
+<properties>태그 : 외부 properties파일의 내용을 불러올 때 사용
+<settings> 태그 : MyBatis 구동 시 선언할 설정 작성
+<typeAliases> 태그 : MyBatis에서 사용할 자료형의 별칭 선언
+<environments> 태그 : MyBatis에서 연동할 DataBase 정보 등록
+<!-- environment id를 구분하여 연결할 DB를 여러 개 구성할 수도 있다. -->
+<mappers> 태그 : 사용하고자 하는 쿼리문이 정의된 mapper파일 등록
+MyBatis를 사용하면 동적 SQL을 작성할 수 있다.
+일반적으로 검색 기능이나 다중 입력 처리 등을 수행해야 할 경우
+SQL을 실행하는 DAO를 여러 번 호출하거나 batch 기능을 이용하여 버퍼에 담아 한 번에 실행시키는 방식으로 쿼리 구현
+MyBatis에서는 이를 동적으로 제어할 수 있는 구문을 제공하여 좀 더 쉽게 쿼리를 구현할 수 있도록 기능 지원한다.
+
+지원 구문 종류
+1. if
+
+SELECT *
+FROM BOARD
+WHERE WRITER = 'admin'
+<if test="title != null">
+	AND TITLE LIKE = #{title}
+ </if
+위의 코드를 보면 동적으로 조건식을 걸어두고 실행할 수도 있다. 물론 다중 if문도 가능하다.
+
+choose
+trim
+foreach
